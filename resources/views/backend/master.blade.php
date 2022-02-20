@@ -49,13 +49,13 @@
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
   <!-- Nucleo Icons -->
-  <link href="https://demos.creative-tim.com/soft-ui-dashboard/assets/css/nucleo-icons.css" rel="stylesheet" />
-  <link href="https://demos.creative-tim.com/soft-ui-dashboard/assets/css/nucleo-svg.css" rel="stylesheet" />
+  <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
   <!-- Font Awesome Icons -->
   <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-  
+  <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
   <!-- CSS Files -->
-  <link id="pagestyle" href="https://demos.creative-tim.com/soft-ui-dashboard/assets/css/soft-ui-dashboard.min.css?v=1.0.3" rel="stylesheet" />
+  <link id="pagestyle" href="../assets/css/soft-ui-dashboard.min.css?v=1.0.3" rel="stylesheet" />
   <!-- Anti-flicker snippet (recommended)  -->
   <style>
     .async-hide {
@@ -1157,11 +1157,11 @@
     </div>
   </div>
   <!--   Core JS Files   -->
-  <script src="{{url('backend/js/popper.min.js')}}"></script>
-  <script src="{{url('backend/js/bootstrap.min.js')}}"></script>
-  <script src="{{url('backend/js/perfect-scrollbar.min.js')}}"></script>
-  <script src="{{url('backend/js/smooth-scrollbar.min.js')}}"></script>
-  <script src="{{url('backend/js/chartjs.min.js')}}"></script>
+  <script src="../assets/js/core/popper.min.js"></script>
+  <script src="../assets/js/core/bootstrap.min.js"></script>
+  <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
+  <script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
+  <script src="../assets/js/plugins/chartjs.min.js"></script>
   <script>
     var ctx = document.getElementById("chart-bars").getContext("2d");
 
@@ -1329,7 +1329,7 @@
   <!-- Github buttons -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
-  <script src="{{url('backend/js/soft-ui-dashboard.min.js')}}"></script>
+  <script src="../assets/js/soft-ui-dashboard.min.js?v=1.0.3"></script>
 </body>
 
 </html>
