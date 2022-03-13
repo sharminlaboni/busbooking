@@ -25,3 +25,34 @@ Route::get('/Booking',function(){
     return view('backend.pages.Booking');
 
 });
+
+Route::get('/Route',function(){
+    return view('backend.pages.Route');
+
+});
+Route::get('/Trip',function(){
+    return view('backend.pages.Trip');
+
+});
+Route::get('/counter',function(){
+    return view('backend.pages.counter');
+
+});
+Route::get('/payment',function(){
+    return view('backend.pages.payment');
+
+});
+Route::get('/customer',function(){
+    return view('backend.pages.customer');
+
+});
+Route::get('/Trip',function(){
+    return view('backend.pages.trip.tripList');
+});
+//url,controller name,controller method,route name
+Route::get('/trip/from',[TripController::class,'tripFrom'])->name('trip.from');
+Route::post('/trip/post',[TripController::class,'tripPost'])->name('trip.post');
+
+Route::get('/route/from',[RouteController::class,'routeFrom'])->name('route.from');
+Route::post('/route/post',[RouteController::class,'routePost'])->name('route.post');
+

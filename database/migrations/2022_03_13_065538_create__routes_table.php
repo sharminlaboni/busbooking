@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCatagoriesTable extends Migration
+class CreateRoutesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,13 @@ class CreateCatagoriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('catagories', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('details')->nullable();
-            $table->timestamps();
-        });
+        Schema::create('_routes', function (Blueprint $table) {
+        $table->id();
+        $table->string('name');
+        $table->string('details')->nullable();
+        $table->timestamps();
+    });
+        
     }
 
     /**
@@ -28,6 +29,6 @@ class CreateCatagoriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('catagories');
+        Schema::dropIfExists('_routes');
     }
 }

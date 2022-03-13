@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
-class catagoryTableseeder extends Seeder
+class RouteTableseeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -19,7 +19,7 @@ class catagoryTableseeder extends Seeder
             'name'=>'wood',
             'details' =>'uuuyyuiti'
         ]);
-        catagory::create([
+        Route::create([
 
             //db coloum name || value 
             'name'=>'woohgg',

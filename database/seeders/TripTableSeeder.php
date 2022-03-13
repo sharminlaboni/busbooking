@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
-class productTableseeder extends Seeder
+class TripTableseeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,7 +15,7 @@ class productTableseeder extends Seeder
     {
         product::create([
             'name'=>'product 1',
-            'catagory_id'=>1,
+            'route_id'=>1,
             'quantity'=>10,
             'price'=>20.0,
             'details'=>'test',
