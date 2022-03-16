@@ -4,19 +4,29 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Trip;
 
-class Tripcontroller extends Controller
+class TripController extends Controller
 {
-    public function tripFrom(){
-        return view('backend.pages.trip.create');
+
+    public function trip(){
+     $trips = Trip::all();
+    return view('backend.pages.Trip.Triplist',compact('trips'));
     }
-    public function tripPost(Request $request){
-        //dd(request->all());
+
+    public function tripCreate(){
+        return view('backend.pages.Trip.Create');
+    }
+
+    public function tripStore(Request $request){
         Trip::create([
-            'name'->$request->Trip_name,
-            'details'->$request->Trip_details
+            // coloum name of db || name of input field
+            'name'=> $request->name,
+            'route_id'=> 1 ,
+            'time'=> $request->time,
+            'price'=>$request->price,
+            'details'=>$request->details,
         ]);
-        return redirect()->back();
+        return redirect()->route('admin.trip.show');
     }
-    
 }

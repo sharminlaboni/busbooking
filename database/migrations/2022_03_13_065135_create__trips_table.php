@@ -18,7 +18,7 @@ class CreateTripsTable extends Migration
             $table->id();
             $table->string('name');
             $table->foreignId('route_id');
-            $table->integer('quantity');
+            $table->integer('time');
             $table->string('details');
             $table->double('price');
             $table->timestamps();

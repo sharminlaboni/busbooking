@@ -14,7 +14,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this ->call(RouteTableSeeder::class);
-        $this ->call(TripTabledSeeder::class);
+        $this ->call(TripTableSeeder::class);
         // \App\Models\User::factory(10)->create();
     }
 }

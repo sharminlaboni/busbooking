@@ -3,8 +3,9 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use App\Models\Route;
 
-class RouteTableseeder extends Seeder
+class RouteTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,19 +14,12 @@ class RouteTableseeder extends Seeder
      */
     public function run()
     {
-        catagory::create([
-
-            //db coloum name || value 
-            'name'=>'wood',
-            'details' =>'uuuyyuiti'
-        ]);
         Route::create([
+            'name'=>'Dhaka-Chittagong',
+            
+            'details'=>'route for dhaka to chittagong',
 
-            //db coloum name || value 
-            'name'=>'woohgg',
-            'details' =>'uuuyyugftttgtiti'
         ]);
-             
-        
+        //
     }
 }
