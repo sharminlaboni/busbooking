@@ -15,5 +15,6 @@
         
 </div>
 <button type="submit" class="btn btn-primary">submit</button>
+<a href="{{route('admin.route.show')}}" class="btn btn-primary">List here</a>
 </from>
 @endsection

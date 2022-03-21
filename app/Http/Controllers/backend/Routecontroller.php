@@ -18,7 +18,7 @@ class RouteController extends Controller
     }
 
     public function routePost(Request $request){
-        // dd($request->all());
+        // dd($request->all());hy
         Route::create([
             // coloum name of DB || name of input field
             'name'=>$request->Route_name,

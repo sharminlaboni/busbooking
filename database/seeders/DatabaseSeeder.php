@@ -15,6 +15,8 @@ class DatabaseSeeder extends Seeder
     {
         $this ->call(RouteTableSeeder::class);
         $this ->call(TripTableSeeder::class);
+        
+
         // \App\Models\User::factory(10)->create();
     }
 }
