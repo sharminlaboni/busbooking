@@ -15,4 +15,10 @@ public function  route()
     return $this ->belongsTo(Route::class);
 }
 
+public function  Bus()
+{
+    return $this ->belongsTo(Bus::class,'Bus_id','id');
+}
+
+
 }

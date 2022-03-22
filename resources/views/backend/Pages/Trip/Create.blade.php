@@ -4,19 +4,27 @@
 <form action="{{route('trip.store')}}" method="POST">
     @csrf
     <div class="form-group">
-      <label for="exampleInputEmail1">bus name</label>
-      <input name="name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-    </div>
-     <div class="form-group">
-        <label for="route">route</label>
-        <select class="form-control" name="route_id" id="">
-            @foreach($routes as $singleBiscuit)
-            <option value="{{$singleBiscuit->id}}">{{$singleBiscuit->name}}</option>
+      <label for="Bus">Bus</label>
+      
+        <select class="form-control" name="Bus_id" id="">
+            @foreach($buses as $singlebus)
+            <option value="{{$singlebus->id}}">{{$singlebus->Bus_name}}</option>
             @endforeach
         </select>
-        
-    </div> 
+</div> 
+      <div class="form-group"> 
+        <label for="route">route</label> 
+         <select class="form-control" name="route_id" id=""> 
+             @foreach($routes as $singleBiscuit) 
+            <option value="{{$singleBiscuit->id}}">{{$singleBiscuit->name}}</option> 
+            @endforeach 
+         </select> 
+        </div> 
+    <!-- <div class="form-group"> -->
+      <!-- <label for="exampleInputPassword1">route_name</label> -->
+      <!-- <input name="route_name" type="number" class="form-control" id="exampleInputPassword1" placeholder="Password"> -->
+    <!-- </div> -->
+    
     <div class="form-group">
       <label for="exampleInputPassword1">time</label>
       <input name="time" type="number" class="form-control" id="exampleInputPassword1" placeholder="Password">

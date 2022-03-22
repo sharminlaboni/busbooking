@@ -5,6 +5,8 @@ use App\Http\Controllers\Backend\TripController;
 use App\Http\Controllers\Backend\RouteController;
 use App\Http\Controllers\Backend\BookingController;
 use App\Http\Controllers\Backend\CustomerController;
+use App\Http\Controllers\Backend\BusController;
+
 
 
 
@@ -69,3 +71,7 @@ Route::post('/Booking/store',[BookingController::class,'BookingStore'])->name('B
 Route::get('/Customer/show',[CustomerController::class,'Customer'])->name('admin.Customer.show');
 Route::get('/Customer/create',[CustomerController::class,'CustomerCreate'])->name('Customer.create');
 Route::post('/Customer/store',[CustomerController::class,'CustomerStore'])->name('Customer.store');
+
+Route::get('/Bus/show',[BusController::class,'Bus'])->name('admin.Bus.show');
+Route::get('/Bus/create',[BusController::class,'BusCreate'])->name('Bus.create');
+Route::post('/Bus/store',[BusController::class,'BusStore'])->name('Bus.store');

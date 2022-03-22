@@ -11,7 +11,7 @@
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col"> name</th>
+      <th scope="col">Bus_name</th>
 
       <th scope="col">route name</th>
 
@@ -26,8 +26,11 @@
   @foreach($trips as $singleBiscuit)
     <tr>
       <th scope="row">{{$singleBiscuit->id}}</th>
-      <td>{{$singleBiscuit->name}}</td>
-      <td>{{$singleBiscuit->route->name}}</td>
+      <td>{{$singleBiscuit->Bus->Bus_name}}</td>
+      <!-- <td>{{$singleBiscuit->route_name}}</td> -->
+
+
+      <td>{{$singleBiscuit->route->name}}</td> 
       <td>{{$singleBiscuit->time}}</td>
       <td>{{$singleBiscuit->price}}</td>
       <td>
