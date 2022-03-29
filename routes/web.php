@@ -75,3 +75,15 @@ Route::post('/Customer/store',[CustomerController::class,'CustomerStore'])->name
 Route::get('/Bus/show',[BusController::class,'Bus'])->name('admin.Bus.show');
 Route::get('/Bus/create',[BusController::class,'BusCreate'])->name('Bus.create');
 Route::post('/Bus/store',[BusController::class,'BusStore'])->name('Bus.store');
+
+Route::get('/Bus/edit/{id}',[BusController::class,'busEdit'])->name('bus.edit');
+Route::put('/Bus/update',[BusController::class,'busUpdate'])->name('bus.update');
+Route::get('/Bus/delete/{id}',[BusController::class,'busDelete'])->name('bus.delete');
+
+Route::get('/Route/edit/{id}',[RouteController::class,'routeEdit'])->name('route.edit');
+Route::put('/Route/update',[RouteController::class,'routeUpdate'])->name('route.update');
+Route::get('/Route/delete/{id}',[RouteController::class,'routeDelete'])->name('route.delete');
+
+Route::get('/trip/edit/{id}',[TripController::class,'tripEdit'])->name('trip.edit');
+Route::put('/trip/update',[TripController::class,'tripUpdate'])->name('trip.update');
+Route::get('/trip/delete/{id}',[TripController::class,'tripDelete'])->name('trip.delete');

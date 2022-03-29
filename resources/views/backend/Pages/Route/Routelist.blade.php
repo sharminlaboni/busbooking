@@ -23,9 +23,9 @@
       <td>{{$singleBiscuit->name}}</td>
       <td>{{$singleBiscuit->details}}</td>
       <td>
-          <a class="btn btn-primary" href="">Edit</a>
-          <a class="btn btn-danger" href="">Delete</a>
-          <a class="btn btn-success" href="">View</a>
+          <a class="btn btn-primary" href="{{route('route.edit',$singleBiscuit->id)}}">Edit</a>
+          <a class="btn btn-danger" href="{{route('route.delete',$singleBiscuit->id)}}">Delete</a>
+          <!-- <a class="btn btn-success" href="">View</a> -->
       </td>
 
     </tr>

@@ -16,6 +16,10 @@
       <th scope="col">route name</th>
 
       <th scope="col">time</th>
+      <th scope="col">details</th>
+
+
+      <th scope="col">image</th>
       <th scope="col">Price</th>
       <th scope="col">Action</th>
     </tr>
@@ -31,9 +35,15 @@
 
 
       <td>{{$singleBiscuit->route->name}}</td> 
-      <td>{{$singleBiscuit->time}}</td>
+      <td>{{$singleBiscuit->time}}</td>      
+      <td>{{$singleBiscuit->details}}</td>
+      <td>{{$singleBiscuit->image}}</td>
+
+
+
+
       <td>{{$singleBiscuit->price}}</td>
-      <td>
+      <td>{{$singleBiscuit->action}}
           <a class="btn btn-primary" href="">Edit</a>
           <a class="btn btn-danger" href="">Delete</a>
           <a class="btn btn-success" href="">View</a>

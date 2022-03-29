@@ -29,4 +29,39 @@ class BusController extends Controller
        return redirect()->route('admin.Bus.show');
 
    }
+   public function busEdit($id){
+
+    $buses = Bus::find($id);
+    if ($buses) {
+    return view('backend.pages.bus.edit',compact('buses'));
+    } else {
+        return redirect()->back();
+    }
+    
+}
+public function busUpdate(Request $request){
+    // dd($request->all());
+    $buses = Bus::find($request->Bus_id);
+    if ($buses) {
+        $buses->update([
+            'Bus_name'=>$request->Bus_name,
+           'Bus_number'=>$request->Bus_number,
+            
+        ]);
+        return redirect()->route('admin.Bus.show');
+    } else {
+        return redirect()->back();
+    }
+}
+    public function busDelete($id){
+        $buses = Bus::find($id);
+        if($buses){
+            $buses->delete();
+            return redirect()->back();
+        }else{
+            return redirect()->back();
+  
+        
+        }
+    }
 }

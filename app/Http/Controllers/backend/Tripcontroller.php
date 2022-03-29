@@ -26,6 +26,16 @@ class TripController extends Controller
     }
 
     public function tripStore(Request $request){
+    //   dd($request->all());
+        $filename=null;
+        if($request->hasFile('image')){
+            $file=$request->file('image');
+            // dd($file);
+               $filename = date('Ymdhis').'.'.$file->getClientoriginalExtension();
+            //    dd($filename);
+               $file ->storeAs('/uploads',$filename);
+        }
+        
         Trip::create([
             // coloum name of db || name of input field
             'Bus_id'=> $request->Bus_id,
@@ -33,7 +43,18 @@ class TripController extends Controller
             'time'=> $request->time,
             'price'=>$request->price,
             'details'=>$request->details,
+            'image'=>$filename,
         ]);
         return redirect()->route('admin.trip.show');
+}
+public function routeEdit($id){
+
+    $routes = Route::find($id);
+    if ($routes) {
+    return view('backend.pages.route.edit',compact('routes'));
+    } else {
+        return redirect()->back();
     }
+    
+}
 }

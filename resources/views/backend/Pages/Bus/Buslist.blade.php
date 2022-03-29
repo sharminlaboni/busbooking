@@ -25,8 +25,8 @@
       <td>{{$singlebus->Bus_name}}</td>
       <td>{{$singlebus->Bus_number}}</td>
       <td>
-          <a class="btn btn-primary" href="">Edit</a>
-          <a class="btn btn-danger" href="">Delete</a>
+          <a class="btn btn-primary" href="{{route('bus.edit',$singlebus->id)}}">Edit</a>
+          <a class="btn btn-danger" href="{{route('bus.delete',$singlebus->id)}}">Delete</a>
           
       </td>
 
