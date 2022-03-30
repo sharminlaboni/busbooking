@@ -1,8 +1,11 @@
 @extends('welcome')
 
 @section('main')
-<form action="{{route('trip.store')}}" method="POST" encType="multipart/form-data">
-    @csrf
+<form action="{{route('trip.update')}}" method="POST" encType="multipart/form-data">
+@method('put') 
+ 
+@csrf
+<input type="hidden" value="{{$trips->id}}"name="trip_id">
     <div class="form-group">
       <label for="Bus">Bus</label>
       
@@ -27,22 +30,22 @@
     
     <div class="form-group">
       <label for="exampleInputPassword1">time</label>
-      <input required name="time" type="time" class="form-control" id="exampleInputPassword1" placeholder="Password">
+      <input value="{{$trips->time}}"   name="time" type="time" class="form-control" id="exampleInputPassword1" placeholder="Password">
     </div>
     <div class="form-group">
         <label for="exampleInputEmail1">Details</label>
-        <input required name="details" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        <input value="{{$trips->details}}" name="details" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
       </div>
       <div class="form-group">
         <label for="exampleInputEmail1">image</label>
-        <input name="image" type="file" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        <input value="{{$trips->image}}"      name="image" type="file" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
       </div>
 
     <div class="form-group">
         <label for="exampleInputEmail1">Price</label>
-        <input required name="price" type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        <input value="{{$trips->price}}"    name="price" type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
       </div>
       

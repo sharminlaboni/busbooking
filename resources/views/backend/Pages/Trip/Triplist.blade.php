@@ -37,15 +37,15 @@
       <td>{{$singleBiscuit->route->name}}</td> 
       <td>{{$singleBiscuit->time}}</td>      
       <td>{{$singleBiscuit->details}}</td>
-      <td>{{$singleBiscuit->image}}</td>
+      <td><img width="150"src="{{url('/uploads',$singleBiscuit->image)}}" alt="trip image"></td>
 
 
 
 
       <td>{{$singleBiscuit->price}}</td>
       <td>{{$singleBiscuit->action}}
-          <a class="btn btn-primary" href="">Edit</a>
-          <a class="btn btn-danger" href="">Delete</a>
+          <a class="btn btn-primary" href="{{route('trip.edit',$singleBiscuit->id)}}">Edit</a>
+          <a class="btn btn-danger" href="{{route('trip.delete',$singleBiscuit->id)}}">Delete</a>
           <a class="btn btn-success" href="">View</a>
       </td>
 

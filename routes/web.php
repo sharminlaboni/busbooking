@@ -6,6 +6,9 @@ use App\Http\Controllers\Backend\RouteController;
 use App\Http\Controllers\Backend\BookingController;
 use App\Http\Controllers\Backend\CustomerController;
 use App\Http\Controllers\Backend\BusController;
+use App\Http\Controllers\Backend\CounterController;
+
+
 
 
 
@@ -71,6 +74,10 @@ Route::post('/Booking/store',[BookingController::class,'BookingStore'])->name('B
 Route::get('/Customer/show',[CustomerController::class,'Customer'])->name('admin.Customer.show');
 Route::get('/Customer/create',[CustomerController::class,'CustomerCreate'])->name('Customer.create');
 Route::post('/Customer/store',[CustomerController::class,'CustomerStore'])->name('Customer.store');
+Route::get('/Counter/show',[CounterController::class,'Counter'])->name('admin.Counter.show');
+Route::get('/Counter/create',[CounterController::class,'CounterCreate'])->name('Counter.create');
+Route::post('/Counter/store',[CounterController::class,'CounterStore'])->name('Counter.store');
+
 
 Route::get('/Bus/show',[BusController::class,'Bus'])->name('admin.Bus.show');
 Route::get('/Bus/create',[BusController::class,'BusCreate'])->name('Bus.create');

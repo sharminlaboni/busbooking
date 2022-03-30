@@ -26,6 +26,15 @@ class TripController extends Controller
     }
 
     public function tripStore(Request $request){
+        $request->validate([
+        'Bus_id'=> 'required',
+        'route_id'=>'required',
+        'time'=> 'required',
+        'price'=>'required',
+        'details'=>'required',
+        'image'=>'image',
+
+        ]);
     //   dd($request->all());
         $filename=null;
         if($request->hasFile('image')){
@@ -47,14 +56,50 @@ class TripController extends Controller
         ]);
         return redirect()->route('admin.trip.show');
 }
-public function routeEdit($id){
+public function tripEdit($id){
+    $routes=Route::all();
+    $buses=Bus::all();
 
-    $routes = Route::find($id);
-    if ($routes) {
-    return view('backend.pages.route.edit',compact('routes'));
+
+    $trips = Trip::find($id);
+    if ($trips) {
+    return view('backend.pages.trip.edit',compact('trips','buses','routes'));
     } else {
         return redirect()->back();
     }
     
 }
+public function tripUpdate(Request $request){
+    // dd($request->all());
+    $trips = Trip::find($request->trip_id);
+    if ($trips) { 
+        $trips->update([
+        'Bus_id'=> $request->Bus_id,
+        'route_id'=>$request->route_id,
+        'time'=> $request->time,
+        'price'=>$request->price,
+        'details'=>$request->details,
+        //'image'=>$filename,
+            
+        ]);
+        return redirect()->route('admin.trip.show');
+    } else {
+        return redirect()->back();
+    }
+}
+
+
+
+public function tripDelete($id){
+    $trips = Trip::find($id);
+    if($trips){
+        $trips->delete();
+        return redirect()->back();
+    }else{
+        return redirect()->back();
+
+    
+    }
+}
+
 }

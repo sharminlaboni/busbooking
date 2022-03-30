@@ -19,9 +19,9 @@ class CreateBookingsTable extends Migration
             $table->string('busname');
             $table->string('startingfrom');
             $table->string('destination');
-            $table->double('date');
+            $table->date('date');
             $table->string('customername');
-            $table->string('customercontact');
+            $table->integer('customercontact');
             $table->string('customeraddress');
             $table->double('payment');
             $table->timestamps();
