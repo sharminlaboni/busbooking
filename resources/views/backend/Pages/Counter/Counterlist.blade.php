@@ -22,12 +22,13 @@
 
   @foreach($counters as $singlecounter)
     <tr>
-      <th scope="row">1</th>
+      <th scope="row">{{$singlecounter->id}}</th>
       <td>{{$singlecounter->counter_name}}</td>
       <td>{{$singlecounter->counter_number}}</td>
       <td>
-          <a class="btn btn-primary" href="">Edit</a>
-          <a class="btn btn-danger" href="">Delete</a>
+          <a class="btn btn-primary" href="{{route('Counter.edit',$singlecounter->id)}}"
+            >Edit</a>
+          <a class="btn btn-danger" href="{{route('Counter.delete',$singlecounter->id)}}">Delete</a>
           
       </td>
 

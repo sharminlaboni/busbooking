@@ -28,6 +28,47 @@ class CustomerController extends Controller
         ]);
         return redirect()->route('admin.Customer.show');
     }
+    public function CustomerEdit($id){
+        $customers=Customer::find($id);
+        if ($customers) {
+        return view('backend.pages.Customer.edit',compact('customers'));
+        } else {
+            return redirect()->back();
+        }
+        
+    }  
+    public function CustomerUpdate(Request $request){
+        // dd($request->all());
+        $customers = Customer::find($request->id);
+        if ($customers) { 
+            $customers->update([
+                'customername'=> $request->customername,
+                'customercontact'=> $request->customercontact,
+                'customeremail'=> $request->customeremail
+            
+        
+                
+            ]);
+            return redirect()->route('admin.Customer.show');
+        } else {
+            return redirect()->back();
+        }
+    }
+
+    public function CustomerDelete($id){
+        $customers = Customer::find($id);
+        if($customers){
+            $customers->delete();
+            return redirect()->back();
+        }else{
+            return redirect()->back();
+    
+        
+        }
+    }
+
+
+
     
     //
 }

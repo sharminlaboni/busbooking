@@ -23,14 +23,47 @@ class CounterController extends Controller
             // coloum name of db || name of input field
             'counter_name'=> $request->counter_name,
             'counter_number'=> $request->counter_number,
-            
-
-            
-            
-        ]);
+            ]);
         return redirect()->route('admin.Counter.show');
     }
     
-    //
+    public function CounterEdit($id){
+        $counters=Counter::find($id);
+        if ($counters) {
+        return view('backend.pages.Counter.edit',compact('counters'));
+        } else {
+            return redirect()->back();
+        }
+        
+    } 
+    public function CounterUpdate(Request $request){
+        // dd($request->all());
+        $counters = Counter::find($request->id);
+        if ($counters) { 
+            $counters->update([
+            'counter_name'=> $request->counter_name,
+            'counter_number'=> $request->counter_number,
+            
+        
+                
+            ]);
+            return redirect()->route('admin.Counter.show');
+        } else {
+            return redirect()->back();
+        }
+    }
+        public function CounterDelete($id){
+            $counters = Counter::find($id);
+            if($counters){
+                $counters->delete();
+                return redirect()->back();
+            }else{
+                return redirect()->back();
+        
+            
+            }
+        }
+    
+    
 
 }

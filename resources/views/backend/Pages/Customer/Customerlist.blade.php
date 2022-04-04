@@ -27,8 +27,8 @@
       <td>{{$singleBiscuit->customercontact}}</td>
       <td>{{$singleBiscuit->customeremail}}</td>
       <td>
-          <a class="btn btn-primary" href="">Edit</a>
-          <a class="btn btn-danger" href="">Delete</a>
+          <a class="btn btn-primary" href="{{route('Customer.edit',$singleBiscuit->id)}}">Edit</a>
+          <a class="btn btn-danger" href="{{route('Customer.delete',$singleBiscuit->id)}}">Delete</a>
           
       </td>
 

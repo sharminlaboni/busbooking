@@ -7,8 +7,25 @@ use App\Http\Controllers\Backend\BookingController;
 use App\Http\Controllers\Backend\CustomerController;
 use App\Http\Controllers\Backend\BusController;
 use App\Http\Controllers\Backend\CounterController;
+use App\Http\Controllers\Backend\UserController;
 
 
+
+
+
+
+
+Route::get('/admin/login',[UserController::class,'login'])->name('admin.login');
+Route::post('/admin/do-login',[UserController::class,'doLogin'])->name('admin.do.login');
+
+Route::group(['prefix'=>'admin','middleware'=>'auth'],function (){   
+     Route::get('/logout',[UserController::class,'logout'])->name('admin.logout');
+
+
+
+    Route::get('/', function () {
+        return view('welcome');
+    })->name('welcome');
 
 
 
@@ -25,13 +42,15 @@ use App\Http\Controllers\Backend\CounterController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/dashboard',function(){
-    return view('backend.pages.dashboard');
 
-});
+
+//Route::get('/welcome', function () {
+    //return view('welcome');
+//})->name('welcome');
+//Route::get('/dashboard',function(){
+    //return view('backend.pages.dashboard');
+
+
 Route::get('/Route',function(){
     return view('backend.pages.Route.create');
 
@@ -53,10 +72,6 @@ Route::get('/payment',function(){
 //Route::get('/customer',function(){
     //return view('backend.pages.customer');
 
-//});
-// Route::get('/Trip',function(){
-//     return view('backend.pages.Trip.Triplist');
-// });
 //url,controller name,controller method,route name
 
 Route::get('/route/show',[RouteController::class,'route'])->name('admin.route.show');
@@ -74,10 +89,19 @@ Route::post('/Booking/store',[BookingController::class,'BookingStore'])->name('B
 Route::get('/Customer/show',[CustomerController::class,'Customer'])->name('admin.Customer.show');
 Route::get('/Customer/create',[CustomerController::class,'CustomerCreate'])->name('Customer.create');
 Route::post('/Customer/store',[CustomerController::class,'CustomerStore'])->name('Customer.store');
+Route::get('/Customer/edit/{id}',[CustomerController::class,'CustomerEdit'])->name('Customer.edit');
+Route::put('/Customer/update',[CustomerController::class,'CustomerUpdate'])->name('Customer.update');
+Route::get('/Customer/delete/{id}',[CustomerController::class,'CustomerDelete'])->name('Customer.delete');
+
+
+
+
 Route::get('/Counter/show',[CounterController::class,'Counter'])->name('admin.Counter.show');
 Route::get('/Counter/create',[CounterController::class,'CounterCreate'])->name('Counter.create');
 Route::post('/Counter/store',[CounterController::class,'CounterStore'])->name('Counter.store');
-
+Route::get('/Counter/edit/{id}',[CounterController::class,'CounterEdit'])->name('Counter.edit');
+Route::put('/Counter/update',[CounterController::class,'CounterUpdate'])->name('Counter.update');
+Route::get('/Counter/delete/{id}',[CounterController::class,'CounterDelete'])->name('Counter.delete');
 
 Route::get('/Bus/show',[BusController::class,'Bus'])->name('admin.Bus.show');
 Route::get('/Bus/create',[BusController::class,'BusCreate'])->name('Bus.create');
@@ -94,3 +118,4 @@ Route::get('/Route/delete/{id}',[RouteController::class,'routeDelete'])->name('r
 Route::get('/trip/edit/{id}',[TripController::class,'tripEdit'])->name('trip.edit');
 Route::put('/trip/update',[TripController::class,'tripUpdate'])->name('trip.update');
 Route::get('/trip/delete/{id}',[TripController::class,'tripDelete'])->name('trip.delete');
+});
