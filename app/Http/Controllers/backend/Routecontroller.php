@@ -5,25 +5,32 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Route;
+use App\Models\Location;
+
 
 class RouteController extends Controller
 {
    public function route(){   
-         $routes = Route::all();
+         $routes = Route::with('fromLocation','toLocation')->get();
+        //  dd($routes);
          return view('backend.pages.Route.Routelist',compact('routes'));
 
 }
     public function routeFrom(){
-        return view('backend.pages.Route.Create');
+        $locations = Location::all();
+        return view('backend.pages.Route.Create',compact('locations'));
     }
 
     public function routePost(Request $request){
-        // dd($request->all());hy
+        // dd($request->all());
         Route::create([
             // coloum name of DB || name of input field
-            'name'=>$request->Route_name,
-            'details'=>$request->Route_details
-        ]);
+            'From_location_name'=>$request->From_Location_id,
+            'To_location_name'=>$request->To_Location_id,
+        ]);        
+         
+
+
 
         return redirect()->route('admin.route.show');
 
@@ -43,8 +50,8 @@ public function routeUpdate(Request $request){
     $routes = route::find($request->route_id);
     if ($routes) {
         $routes->update([
-            'name'=>$request->Route_name,
-            'details'=>$request->Route_details
+            'From_location_name'=>$request->From_location_name,
+            'To_location_name'=>$request->To_location_name,
             
         ]);
         return redirect()->route('admin.route.show');

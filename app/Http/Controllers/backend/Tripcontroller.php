@@ -21,6 +21,7 @@ class TripController extends Controller
 
     public function tripCreate(){ 
         $routes=Route::all();
+        // dd($routes);
         $buses=Bus::all();
        return view('backend.pages.Trip.Create',compact('buses','routes'));
     }

@@ -19,7 +19,7 @@
         <label for="route">route</label> 
          <select class="form-control" name="route_id" id=""> 
              @foreach($routes as $singleBiscuit) 
-            <option value="{{$singleBiscuit->id}}">{{$singleBiscuit->name}}</option> 
+            <option value="{{$singleBiscuit->id}}">{{$singleBiscuit->route->From_location_name}},{{$singleBiscuit->route->To_location_name}}</option> 
             @endforeach 
          </select> 
         </div> 

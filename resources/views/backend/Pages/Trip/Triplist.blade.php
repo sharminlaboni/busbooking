@@ -34,7 +34,7 @@
       <!-- <td>{{$singleBiscuit->route_name}}</td> -->
 
 
-      <td>{{$singleBiscuit->route->name}}</td> 
+      <td>{{$singleBiscuit->route->From_location_name}} - {{$singleBiscuit->route->To_location_name}}</td> 
       <td>{{$singleBiscuit->time}}</td>      
       <td>{{$singleBiscuit->details}}</td>
       <td><img width="150"src="{{url('/uploads',$singleBiscuit->image)}}" alt="trip image"></td>

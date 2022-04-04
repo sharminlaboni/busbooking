@@ -8,6 +8,9 @@ use App\Http\Controllers\Backend\CustomerController;
 use App\Http\Controllers\Backend\BusController;
 use App\Http\Controllers\Backend\CounterController;
 use App\Http\Controllers\Backend\UserController;
+use App\Http\Controllers\Backend\LocationController;
+
+
 
 
 
@@ -94,6 +97,12 @@ Route::put('/Customer/update',[CustomerController::class,'CustomerUpdate'])->nam
 Route::get('/Customer/delete/{id}',[CustomerController::class,'CustomerDelete'])->name('Customer.delete');
 
 
+Route::get('/Location/show',[LocationController::class,'Location'])->name('admin.location.show');
+Route::get('/Location/create',[LocationController::class,'LocationCreate'])->name('location.create');
+Route::post('/Location/store',[LocationController::class,'LocationStore'])->name('location.store');
+Route::get('/Location/edit/{id}',[LocationController::class,'LocationEdit'])->name('location.edit');
+Route::put('/Location/update',[LocationController::class,'LocationUpdate'])->name('location.update');
+Route::get('/Location/delete/{id}',[LocationController::class,'LocationDelete'])->name('location.delete');
 
 
 Route::get('/Counter/show',[CounterController::class,'Counter'])->name('admin.Counter.show');

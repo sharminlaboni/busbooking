@@ -8,13 +8,13 @@
 
 
 <div class="from-group">
-        <lable for="exampleInputEmail"> Route name</lable>
-        <input name="Route_name" type="text" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp"placeholder="Details">
+        <lable for="exampleInputEmail">From_location_name</lable>
+        <input name="From_location_name" type="text" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp"placeholder="Details">
 
 </div>
 <div class="from-group">
-        <lable for="exampleInputEmail">Details</lable>
-        <input name="Route_details" type="text" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp"placeholder="Details">
+        <lable for="exampleInputEmail">To_location_name</lable>
+        <input name="To_location_name" type="text" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp"placeholder="Details">
         
 </div>
 <button type="submit" class="btn btn-primary">submit</button>
