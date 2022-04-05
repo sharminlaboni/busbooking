@@ -12,11 +12,12 @@
             @endforeach
         </select>
 </div> 
+
       <div class="form-group"> 
         <label for="route">route</label> 
          <select class="form-control" name="route_id" id=""> 
              @foreach($routes as $singleBiscuit) 
-            <option value="{{$singleBiscuit->id}}">{{$singleBiscuit->From_location_name}} - {{$singleBiscuit->To_location_name}}</option> 
+            <option value="{{$singleBiscuit->id}}">{{$singleBiscuit->fromLocation->Location_name}} - {{$singleBiscuit->toLocation->Location_name}}</option> 
             @endforeach 
          </select> 
         </div> 

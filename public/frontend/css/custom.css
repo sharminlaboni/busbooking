@@ -1,0 +1,289 @@
+/* Add here all your css styles (customizations) */
+
+#ui-timepicker-div {
+  background-color: white;
+  padding: 0 10px;
+  border: rgb(187, 187, 187) solid thin;
+}
+
+.trip-summary {
+  border: 2px solid #eeeeee;
+  border-radius: 5px !important;
+  margin-top: 10px;
+}
+.trip-summary:hover {
+  background-color: #f1f1f1;
+  -webkit-box-shadow: 0 10px 6px -6px #bcbcbc;
+  -moz-box-shadow: 0 10px 6px -6px #bcbcbc;
+  box-shadow: 0 10px 6px -6px #bcbcbc;
+}
+
+.trip-summary > div {
+  padding: 10px;
+}
+
+.trip-summary .fw-area-code,
+.tripTable .fw-area-code {
+  font-size: 130%;
+  font-weight: 400;
+}
+
+.trip-summary .fw-coach-code-info > div,
+.tripTable .fw-coach-code-info > div {
+  display: inline-block;
+}
+
+.trip-summary .fw-coach-code-info > i,
+.tripTable .fw-coach-code-info > i {
+  font-size: 250%;
+  font-weight: 500;
+}
+
+.trip-summary .fw-coach-code-info .fw-coach-code,
+.tripTable .fw-coach-code-info .fw-coach-code {
+  font-weight: 600;
+  font-size: 140%;
+}
+
+.trip-summary .fw-coach-code,
+.fw-coach-code-label {
+  margin-left: 15px;
+}
+
+.trip-summary .fw-tripinfo-label {
+  font-variant: small-caps;
+  font-size: 120%;
+  font-weight: 400;
+}
+
+.trip-summary .fw-tripinfo-destination {
+  font-weight: bolder;
+  font-size: 103%;
+}
+
+.trip-summary .fw-tripinfo-time .fw-tripinfo-route-note {
+  font-weight: 600;
+  font-size: 140%;
+}
+
+.trip-summary .fw-fareinfo {
+  text-align: center;
+}
+
+.trip-summary .fw-fare-currency-label {
+  font-size: 130%;
+}
+
+.trip-summary .fw-fare-currency {
+  font-weight: 600;
+  font-size: 200%;
+}
+
+/* ====== Trip Details ======== */
+.trip-details {
+  display: none;
+  padding: 15px 15px 0px 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #eeeeee;
+}
+
+.booking-form {
+  border: 0;
+}
+
+.seat-layout-container {
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+.seat-selection-summary-container {
+  padding-top: 15px;
+}
+.boarding-point-container {
+  padding-top: 15px;
+}
+.seat-label {
+  min-width: 35px;
+  text-align: center;
+}
+
+.seat-label input[type='checkbox'] {
+  width: 0;
+  height: 0;
+}
+
+.seat-label a {
+  color: black;
+  display: inline-block;
+  width: 35px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.seat-unavailable {
+  background-color: #dddddd !important;
+}
+
+.seat-unavailable a {
+  color: #cccccc;
+  cursor: no-drop;
+}
+
+.seat-selected {
+  background-color: darkgreen !important;
+}
+
+.seat-selected.business-seat {
+  background-color: darkgreen !important;
+}
+
+.seat-selected a {
+  color: white;
+  font-weight: 700;
+}
+
+label.business-seat {
+  background-color: #eeeeee;
+}
+
+label.standard-seat {
+  background-color: #eeeeee;
+}
+
+.innerTripListTable {
+  width: 100%;
+}
+
+.innerTripListTable tbody tr td {
+  padding: 3px 2px;
+  border-top-width: 0px !important;
+  border-right-width: 0px !important;
+  border-left-width: 0px !important;
+  text-align: left;
+  padding-left: 15px;
+}
+
+.tripLabel {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .tripLabel {
+    font-size: 12px;
+  }
+}
+
+/*Mobile Query*/
+@media only screen and (max-width: 480px) {
+  .tripLabel {
+    font-size: 12px;
+  }
+}
+
+.amountLabel {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.amountLabelMobile {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.tripTable {
+  display: none;
+}
+
+.tripTable tbody tr td {
+  border: 1px solid #dddddd;
+}
+
+.tripTable tbody tr td:first-child {
+  vertical-align: middle;
+}
+
+.headerTitle {
+  font-weight: 600;
+  font-size: 15px;
+  margin-left: -10px;
+  /*font-variant: small-caps;*/
+  color: grey;
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .headerTitle {
+    font-size: 10px;
+  }
+}
+
+/*Mobile Query*/
+@media only screen and (max-width: 480px) {
+  .headerTitle {
+    font-size: 10px;
+  }
+}
+
+.arrow-down {
+  margin-top: 10%;
+}
+
+.break-word {
+  word-break: break-word;
+  vertical-align: top;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.special-bus-info {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: transparent;
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+  .special-bus-info {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (max-device-width: 640px) and (orientation: landscape) {
+  .special-bus-info {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}
+
+.coach-description {
+  margin-left: 6px;
+  font-size: 14px;
+  font-weight: normal;
+}
+.coach-description-icon {
+  font-size: 24px;
+}
+
+@media (min-width: 300px) and (max-width: 620px) {
+  .boarding-point-level {
+    font-size: 11px !important;
+  }
+}

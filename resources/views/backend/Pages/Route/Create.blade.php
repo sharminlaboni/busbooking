@@ -5,7 +5,7 @@
 
 
 <div class="from-group">
-        <lable for="exampleInputEmail">From_location_name</lable>
+        <label for="exampleInputEmail">From_location_name</label>
         <select class="form-control" name="From_Location_id" id="">
             @foreach($locations as $singleLocation)
             <option value="{{$singleLocation->id}}">{{$singleLocation->Location_name}}</option>

@@ -9,7 +9,13 @@ use App\Http\Controllers\Backend\BusController;
 use App\Http\Controllers\Backend\CounterController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\LocationController;
+use App\Http\Controllers\Frontend\HomeController;
 
+
+
+//Route::get('/',function(){
+    //return view('frontend.pages.home');
+//});
 
 
 
@@ -128,3 +134,8 @@ Route::get('/trip/edit/{id}',[TripController::class,'tripEdit'])->name('trip.edi
 Route::put('/trip/update',[TripController::class,'tripUpdate'])->name('trip.update');
 Route::get('/trip/delete/{id}',[TripController::class,'tripDelete'])->name('trip.delete');
 });
+
+//website
+Route::get('/',[HomeController::class,'home'])->name('home');
+Route::get('/location_list',[LocationController::class.'location_name'])->name('website.location.show');
+

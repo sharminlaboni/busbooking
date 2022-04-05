@@ -15,7 +15,7 @@ class TripController extends Controller
 
     public function trip(){
      $trips = Trip::with('route','Bus')->get();
-     //dd($trips);
+    //  dd($trips);
       return view('backend.pages.Trip.Triplist',compact('trips'));
     }
 
@@ -36,7 +36,7 @@ class TripController extends Controller
         'image'=>'image',
 
         ]);
-    //   dd($request->all());
+      //dd($request->all());
         $filename=null;
         if($request->hasFile('image')){
             $file=$request->file('image');
@@ -45,7 +45,8 @@ class TripController extends Controller
             //    dd($filename);
                $file ->storeAs('/uploads',$filename);
         }
-        
+              //   dd($request->all());
+
         Trip::create([
             // coloum name of db || name of input field
             'Bus_id'=> $request->Bus_id,
