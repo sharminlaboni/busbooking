@@ -24,6 +24,8 @@ class BusController extends Controller
            // coloum name of DB || name of input field
            'Bus_name'=>$request->Bus_name,
            'Bus_number'=>$request->Bus_number,
+           'Bus_type'=>$request->Bus_type,
+            
        ]);
 
        return redirect()->route('admin.Bus.show');
@@ -46,6 +48,8 @@ public function busUpdate(Request $request){
         $buses->update([
             'Bus_name'=>$request->Bus_name,
            'Bus_number'=>$request->Bus_number,
+           'Bus_type'=>$request->Bus_type,
+            
             
         ]);
         return redirect()->route('admin.Bus.show');

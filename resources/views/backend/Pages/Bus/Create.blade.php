@@ -14,6 +14,11 @@
         <input name="Bus_number" type="text" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp"placeholder="Details">
         
 </div>
+<div class="from-group">
+        <lable for="exampleInputEmail">Bus_type</lable>
+        <input name="Bus_type" type="text" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp"placeholder="Details">
+        
+</div>
 <button type="submit" class="btn btn-primary">submit</button>
 
 </from>

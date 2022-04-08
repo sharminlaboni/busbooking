@@ -11,9 +11,9 @@
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">customername</th>
-      <th scope="col">customercontact</th>
-      <th scope="col">customeremail</th>
+      <th scope="col">name</th>
+      <th scope="col">password</th>
+      <th scope="col">email</th>
       <th scope="col">Action</th>
     </tr>
   </thead>
@@ -23,9 +23,9 @@
   @foreach($customers as $singleBiscuit)
     <tr>
       <th scope="row">1</th>
-      <td>{{$singleBiscuit->customername}}</td>
-      <td>{{$singleBiscuit->customercontact}}</td>
-      <td>{{$singleBiscuit->customeremail}}</td>
+      <td>{{$singleBiscuit->name}}</td>
+      <td>{{$singleBiscuit->password}}</td>
+      <td>{{$singleBiscuit->email}}</td>
       <td>
           <a class="btn btn-primary" href="{{route('Customer.edit',$singleBiscuit->id)}}">Edit</a>
           <a class="btn btn-danger" href="{{route('Customer.delete',$singleBiscuit->id)}}">Delete</a>

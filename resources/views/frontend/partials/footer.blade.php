@@ -10,24 +10,19 @@
             <div class="col-md-6">
                 <p>
                     2022 &copy; All Rights Reserved.
-                    <a href="#">Shohagh Paribahan Pvt. Ltd.</a>|<a href="/termsAndConditions">Terms &
-                    Conditions</a>|<a href="/privacyPolicy">Privacy Policy</a>
+                    <a href="#">Online Bus Reservation System</a>
                 </p>
             </div>
             <div class="col-md-5">
                             </div>
 
             <!-- Social Links -->
-            <div class="col-md-1">
+            <!-- <div class="col-md-1">
                 <ul class="footer-socials list-inline" style="margin-top: 6px">
-                    <li>
-                        <a class="facebook" href="https://www.facebook.com/shohagh.net" target="_blank">
-                            <img alt="Facebook" src="/images/facebook.png">
-                        </a>
-                    </li>
+                    
                 
                 </ul>
-            </div>
+            </div> -->
             <!-- End Social Links -->
         </div>
     </div>

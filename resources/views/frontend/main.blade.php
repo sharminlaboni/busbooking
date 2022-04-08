@@ -37,9 +37,9 @@
 <link rel="stylesheet" href="{{url('/frontend/css/font-awesome.min.css')}}"> 
 <link rel="stylesheet" href="{{url('/frontend/css/parallax-slider.css')}}">
 <link rel="stylesheet" href="{{url('/frontend/css/owl.carousel.css')}}">
-
+<!-- 
 <link rel="stylesheet" href="{{url('/frontend/css/sky-forms.css')}}">
-<link rel="stylesheet" href="{{url('/frontend/css/custom-sky-forms.css')}}">
+<link rel="stylesheet" href="{{url('/frontend/css/custom-sky-forms.css')}}"> -->
 <link rel="stylesheet" href="{{url('/frontend/css/jquery.dataTables.min.css')}}">
 <link rel="stylesheet" href="{{url('frontend/css/dataTables.responsive.css')}}">
 <!-- CSS Theme -->
@@ -285,13 +285,9 @@
     </div>
 </div>
 
-<style>
-    .facebook img {
-        width: 22px;
-    }
-</style>
+<!-- hv,,, -->
 
-<script type="text/javascript" src="/assets/plugins/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="{{url('frontend/js/jquery.min.js')}}"></script>
 <script type="application/javascript">
     $(document).ready(function () {
         $('#origin').change(function (data) {

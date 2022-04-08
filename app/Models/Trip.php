@@ -18,6 +18,10 @@ public function  Bus()
 {
     return $this ->belongsTo(Bus::class,'Bus_id','id');
 }
+public function  time()
+{
+    return $this ->belongsTo(Time::class,'time_id','id');
+}
 
 
 }

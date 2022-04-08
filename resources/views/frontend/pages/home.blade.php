@@ -21,12 +21,14 @@
     </div>
 </div>
 <div id="one" class="tabcontent">
-
-
-    <form action="/search" id="sky-form" class="sky-form" method="post">
+<form action="">
+    
+</form>
+    <form action="{{route('trip.search')}}" method="POST" role=""  id="sky-form" class="sky-form">
+        @csrf
         <fieldset>
             <section class="col-md-6 col-sm-6 col-xs-12 col-lg-2">
-                <label class="select"> <a href="{{route('website.location.show')}}"></a>
+                <label class="select">
                     <select name="fromAreaCode" id="origin">
                         <option value=""> Select an location from </option>
 
@@ -36,30 +38,13 @@
                             {{$info->Location_name}}
                         </option>
                         @endforeach
-                        <!--                           <option value="KHL" >
-                                    Khulna
-                                </option>
-                                                            <option value="JSR" >
-                                    Jessore
-                                </option>
-                                                            <option value="SATKHIRA" >
-                                    Satkhira
-                                </option>
-                                                            <option value="BPL" >
-                                    Benapole
-                                </option>
-                                                            <option value="CTG" >
-                                    Chittagong
-                                </option>
-                                                            <option value="COXSBAZAR" >
-                                    Cox's Bazar
-                                </option> -->
+            
                     </select>
 
                 </label>
             </section>
             <section class="col-md-6 col-sm-6 col-xs-12 col-lg-2">
-                <label class="select"><a href="{{route('website.location.show')}}"></a>
+                <label class="select">
                     <select name="toAreaCode" id="destination">
                         <option value="">Select an location to</option>
                         @foreach($locations as $info)
@@ -67,27 +52,7 @@
                             {{$info->Location_name}}
                         </option>
                         @endforeach
-                        <!-- <option value="DHK">
-                            Dhaka
-                        </option>
-                        <option value="KHL">
-                            Khulna
-                        </option>
-                        <option value="JSR">
-                            Jessore
-                        </option>
-                        <option value="SATKHIRA">
-                            Satkhira
-                        </option>
-                        <option value="BPL">
-                            Benapole
-                        </option>
-                        <option value="CTG">
-                            Chittagong
-                        </option>
-                        <option value="COXSBAZAR">
-                            Cox's Bazar
-                        </option> -->
+                
                     </select>
                     
                 </label>
@@ -106,15 +71,11 @@
                         <option value="">
                             Time Period
                         </option>
-                        <option value="05:00AM-11:59AM">
-                            Morning (05:00AM-11:59AM)
+                        @foreach($times as $timeinfo)
+                        <option value="{{$timeinfo->id}}">
+                            {{$timeinfo->time}}
                         </option>
-                        <option value="12:00PM-05:59PM">
-                            Afternoon (12:00PM-05:59PM)
-                        </option>
-                        <option value="06:00PM-11:59PM">
-                            Night (06:00PM-11:59PM)
-                        </option>
+                        @endforeach
                     </select>
                     <i></i>
                 </label>
@@ -133,31 +94,16 @@
                 </label>
             </section>
             <div class="col-md-6 col-sm-6 col-xs-5 col-lg-1">
-                <button class="btn-u submitBtn form-control" type="submit">
-                    <i class="fa fa-search"></i>
-                </button>
+               
+            
             </div>
         </fieldset>
+        <button type="submit">Submit</button>
+
     </form>
 </div>
 
 <div id="two" class="tabcontent">
-
-
-    <form action="/search/ticket-details" method="get" class="sky-form">
-        <fieldset>
-            <section class="col-md-8 col-sm-12 col-xs-12 col-lg-7">
-                <label class="input">
-                    <input type="text" name="pnr" id="pnr" placeholder="Please Enter Ticket PNR" class="form-control" value="">
-                </label>
-            </section>
-            <div class="col-md-4 col-sm-12 col-xs-12 col-lg-2">
-                <button class="btn-u form-control" type="submit">
-                    Search
-                </button>
-            </div>
-        </fieldset>
-    </form>
 
     <div class="row">
         <div class="col-md-12">
@@ -165,7 +111,7 @@
         </div>
     </div>
 </div>
-</div>
+
 
 <div id="matchedWarning" class="modal fade" role="dialog">
 
@@ -209,7 +155,8 @@
                     &nbsp;
                 </button>
                 <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="gotToNewWebsite()"><span>Continue</span>
-                    &nbsp;
+                   <a herf="{{route('trip.search')}}">Button</a>
+                &nbsp;
                 </button>
             </div>
         </div>
@@ -227,7 +174,7 @@
 <!--=== Content Part ===-->
 <div class="container content-sm" style="margin-top: -20px">
 
-    <div class="row">
+    <!-- <div class="row">
         <div class="margine10">
             <div class="col-sm-2">
             </div>
@@ -246,10 +193,10 @@
             <div class="col-sm-2">
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- End Service Blokcs -->
 
-    <h2 class="h2-heading" style="margin-top: 50px;margin-bottom: 50px">WHY SHOHAGH PARIBAHAN</h2>
+    <h2 class="h2-heading" style="margin-top: 50px;margin-bottom: 50px">WHY Online Bus Tiket Reservation</h2>
     <div class="row banner-wrap">
         <div class="col-md-3 col-sm-6 banner-section">
             <div class="box1-img-container">

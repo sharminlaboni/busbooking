@@ -17,8 +17,10 @@ class CreateTripsTable extends Migration
         Schema::create('trips', function (Blueprint $table) {
             $table->id();
             $table->foreignId('Bus_id');
+            $table->string('bus_type');
             $table->foreignID('route_id');
-            $table->time('time');
+            $table->date('date');
+            $table->foreignID('time_id');
             $table->string('details');          
             $table->string('image')->nullable();
              $table->double('price');

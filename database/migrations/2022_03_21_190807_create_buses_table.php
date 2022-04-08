@@ -17,6 +17,7 @@ class CreateBusesTable extends Migration
             $table->id();
             $table->string('Bus_name');
             $table->integer('Bus_number');
+            $table->string('Bus_type');
             $table->timestamps();
         });
     }

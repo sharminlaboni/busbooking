@@ -12,6 +12,10 @@
             @endforeach
         </select>
 </div> 
+<div class="form-group">
+      <label for="exampleInputPassword1">bus_type</label>
+      <input required name="bus_type" type="text" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    </div>
 
       <div class="form-group"> 
         <label for="route">route</label> 
@@ -21,6 +25,11 @@
             @endforeach 
          </select> 
         </div> 
+        <div class="form-group">
+        <label for="exampleInputEmail1">date</label>
+        <input required name="date" type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
     <!-- <div class="form-group"> -->
       <!-- <label for="exampleInputPassword1">route_name</label> -->
       <!-- <input name="route_name" type="number" class="form-control" id="exampleInputPassword1" placeholder="Password"> -->
@@ -28,7 +37,11 @@
     
     <div class="form-group">
       <label for="exampleInputPassword1">time</label>
-      <input required name="time" type="time" class="form-control" id="exampleInputPassword1" placeholder="Password">
+      <select class="form-control" name="time_id" id="">
+            @foreach($times as $timeinfo)
+            <option value="{{$timeinfo->id}}">{{$timeinfo->time}}</option>
+            @endforeach
+        </select>
     </div>
     <div class="form-group">
         <label for="exampleInputEmail1">Details</label>

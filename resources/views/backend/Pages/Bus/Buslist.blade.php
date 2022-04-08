@@ -13,6 +13,7 @@
       <th scope="col">#</th>
       <th scope="col">Bus_name</th>
       <th scope="col">Bus_number</th>
+      <th scope="col">Bus_type</th>
       <th scope="col">Action</th>
     </tr>
   </thead>
@@ -24,6 +25,7 @@
       <th scope="row">1</th>
       <td>{{$singlebus->Bus_name}}</td>
       <td>{{$singlebus->Bus_number}}</td>
+      <td>{{$singlebus->Bus_type}}</td>
       <td>
           <a class="btn btn-primary" href="{{route('bus.edit',$singlebus->id)}}">Edit</a>
           <a class="btn btn-danger" href="{{route('bus.delete',$singlebus->id)}}">Delete</a>

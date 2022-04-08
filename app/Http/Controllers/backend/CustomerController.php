@@ -19,9 +19,11 @@ class CustomerController extends Controller
     public function CustomerStore(Request $request){
         Customer::create([
             // coloum name of db || name of input field
-            'customername'=> $request->customername,
-            'customercontact'=> $request->customercontact,
-            'customeremail'=> $request->customeremail,
+            'name'=> $request->name,
+            
+            'email'=> $request->customeremail,
+            'password'=> $request->password,
+
 
             
             
@@ -42,9 +44,11 @@ class CustomerController extends Controller
         $customers = Customer::find($request->id);
         if ($customers) { 
             $customers->update([
-                'customername'=> $request->customername,
-                'customercontact'=> $request->customercontact,
-                'customeremail'=> $request->customeremail
+                'name'=> $request->name,
+                
+                'email'=> $request->email,
+                'password'=> $request->password,
+
             
         
                 
@@ -63,8 +67,18 @@ class CustomerController extends Controller
         }else{
             return redirect()->back();
     
-        
+    
         }
+        Customer::create([
+            'name'=>$request->name,
+                'email'=>$request->email,
+                'password'=>bcrypt($request->password),
+
+
+
+        ]);
+        return redirect()->back();
+
     }
 
 

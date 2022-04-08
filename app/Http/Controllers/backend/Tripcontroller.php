@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Trip;
 use App\Models\Route;
 use App\Models\Bus;
+use App\Models\Time;
 
 
 
@@ -23,14 +24,18 @@ class TripController extends Controller
         $routes=Route::all();
         // dd($routes);
         $buses=Bus::all();
-       return view('backend.pages.Trip.Create',compact('buses','routes'));
+        $times=Time::all();
+       return view('backend.pages.Trip.Create',compact('buses','routes','times'));
     }
 
     public function tripStore(Request $request){
+        // dd($request->all());
         $request->validate([
         'Bus_id'=> 'required',
+        'bus_type'=>'required',
         'route_id'=>'required',
-        'time'=> 'required',
+        'date'=>'required',
+        'time_id'=> 'required',
         'price'=>'required',
         'details'=>'required',
         'image'=>'image',
@@ -45,13 +50,15 @@ class TripController extends Controller
             //    dd($filename);
                $file ->storeAs('/uploads',$filename);
         }
-              //   dd($request->all());
+               //dd($request->all());
 
         Trip::create([
             // coloum name of db || name of input field
             'Bus_id'=> $request->Bus_id,
+            'bus_type'=>$request->bus_type,
             'route_id'=>$request->route_id,
-            'time'=> $request->time,
+            'date'=>$request->date,
+            'time_id'=> $request->time_id,
             'price'=>$request->price,
             'details'=>$request->details,
             'image'=>$filename,
@@ -77,8 +84,10 @@ public function tripUpdate(Request $request){
     if ($trips) { 
         $trips->update([
         'Bus_id'=> $request->Bus_id,
+        'bus_type'=>$request->bus_type,
         'route_id'=>$request->route_id,
-        'time'=> $request->time,
+        'date'=>$request->date,
+        'time_id'=> $request->time_id,
         'price'=>$request->price,
         'details'=>$request->details,
         //'image'=>$filename,

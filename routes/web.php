@@ -9,7 +9,9 @@ use App\Http\Controllers\Backend\BusController;
 use App\Http\Controllers\Backend\CounterController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\LocationController;
+use App\Http\Controllers\Backend\TimeController;
 use App\Http\Controllers\Frontend\HomeController;
+
 
 
 
@@ -17,6 +19,9 @@ use App\Http\Controllers\Frontend\HomeController;
     //return view('frontend.pages.home');
 //});
 
+// Route::get('/search',function(){
+//     return view('frontend.pages.search');
+// });
 
 
 
@@ -109,6 +114,9 @@ Route::post('/Location/store',[LocationController::class,'LocationStore'])->name
 Route::get('/Location/edit/{id}',[LocationController::class,'LocationEdit'])->name('location.edit');
 Route::put('/Location/update',[LocationController::class,'LocationUpdate'])->name('location.update');
 Route::get('/Location/delete/{id}',[LocationController::class,'LocationDelete'])->name('location.delete');
+Route::get('/time/show',[TimeController::class,'time'])->name('admin.time.show');
+Route::get('/time/create',[TimeController::class,'timeCreate'])->name('time.create');
+Route::post('/time/store',[TimeController::class,'timeStore'])->name('time.store');
 
 
 Route::get('/Counter/show',[CounterController::class,'Counter'])->name('admin.Counter.show');
@@ -133,9 +141,18 @@ Route::get('/Route/delete/{id}',[RouteController::class,'routeDelete'])->name('r
 Route::get('/trip/edit/{id}',[TripController::class,'tripEdit'])->name('trip.edit');
 Route::put('/trip/update',[TripController::class,'tripUpdate'])->name('trip.update');
 Route::get('/trip/delete/{id}',[TripController::class,'tripDelete'])->name('trip.delete');
+Route::get('/user/list',[UserController::class,'list'])->name('user.list');
 });
 
 //website
 Route::get('/',[HomeController::class,'home'])->name('home');
 Route::get('/location_list',[LocationController::class.'location_name'])->name('website.location.show');
+Route::get('/time_list',[TimeController::class.'time'])->name('website.time.show');
+
+Route::post('/customer/registration',[HomeController::class,'customerRegistration'])->name('customer.registration');
+Route::get('/customer/login',[HomeController::class,'login'])->name('customer.login');
+Route::post('/customer/do-login',[HomeController::class,'doLogin'])->name('customer.do.login');
+
+
+Route::post('/search',[HomeController::class,'Search'])->name('trip.search');
 
