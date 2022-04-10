@@ -11,16 +11,15 @@
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">PNR</th>
+      
 
       <th scope="col">busname</th>
-      <th scope="col">startingfrom</th>
-      <th scope="col">destination</th>
+      <th scope="col">seatname</th>
+      <th scope="col">time</th>
       <th scope="col">date</th>
-      <th scope="col">customername</th>
-      <th scope="col">customercontact</th>
-      <th scope="col">customeraddress</th>
-      <th scope="col">payment</th>
+      <th scope="col">user</th>
+      <th scope="col">Amount</th>
+      <th scope="col">status</th>
       <th scope="col">Action</th>
     </tr>
   </thead>
@@ -30,16 +29,16 @@
   @foreach($books as $singleBiscuit)
     <tr>
       <th scope="row">1</th>
-      <td>{{$singleBiscuit->PNR}}</td>
+      
 
       <td>{{$singleBiscuit->busname}}</td>
-      <td>{{$singleBiscuit->startingfrom}}</td>
-      <td>{{$singleBiscuit->destination}}</td>
+      <td>{{$singleBiscuit->seatname}}</td>
+      <td>{{$singleBiscuit->time}}</td>
       <td>{{$singleBiscuit->date}}</td>
-      <td>{{$singleBiscuit->customername}}</td>
-      <td>{{$singleBiscuit->customercontact}}</td>
-      <td>{{$singleBiscuit->customeraddress}}</td>
-      <td>{{$singleBiscuit->payment}}</td>
+      <td>{{$singleBiscuit->user}}</td>
+      <td>{{$singleBiscuit->Amount}}</td>
+      <td>{{$singleBiscuit->status}}</td>
+      
 
 
       <td>

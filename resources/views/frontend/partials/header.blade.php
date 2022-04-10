@@ -1,16 +1,9 @@
 
-
-<!-- Button trigger modal -->
-<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Launch demo modal
-</button> -->
-
-<!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Registration</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -39,31 +32,8 @@
     </div>
   </div>
 </div>
-<!-- login -->
 
-
-
-         <!-- <form action="">
-            <div class="form-group">
-                <label form="">Enter customer Name</label>
-                <input class="form -control" required name="name" placeholder="Enter Email">
-            </div>
-            <div class="form-group">
-                <label form="">Enter customer Name</label>
-                <input class="form -control" required name="name" placeholder="Enter Email">
-            </div>
-            <div class="form-group">
-                <label form="">Enter customer Name</label>
-                <input class="form -control" required name="name" placeholder="Enter Email">
-            </div>  -->
-        
-      
-     
-            
-
-
-
-<div class="header d-print-none">
+ <div class="header d-print-none">
     <div class="container">
         <a href="/"
            class="logo imgwrapper">
@@ -78,20 +48,14 @@
             <ul class="loginbar pull-right"
                 style="padding-left: 5px !important;">
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Rgistration
+  Registration
 </button>
 
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  login
-</button>
-          
-                 <!-- <li><a href="/signup">Registration</a></li>
-                    <li class="topbar-devider"></li>
-                     <li><a href="/login">Login</a></li>   -->
-                            </ul>
-        </div> 
+ 
+ </ul>
+ </div> 
 
-        <button type="button"
+ <button type="button"
                 class="navbar-toggle"
                 data-toggle="collapse"
                 data-target=".navbar-responsive-collapse">
@@ -106,15 +70,12 @@
                 <!-- Home -->
                 <li class="active">
                     <a href="/">Home</a>
-                </li>
-                                <li class="">
-                    <a href="/locations">Locations</a>
-                </li>
+                
                 <li class="">
                     <a href="/contactUs">Contact Us</a>
                 </li>
-                <li class="">
-                    <a href="/faq">FAQ</a>
+                 <li class="">
+                 <a href="{{route('customer.login')}}">Login</a>
                 </li>
             </ul>
         </div>

@@ -200,7 +200,7 @@
     <div class="row banner-wrap">
         <div class="col-md-3 col-sm-6 banner-section">
             <div class="box1-img-container">
-                <img class="box1-img" src="../../images/seat.png" alt="shohagh.com">
+                <img class="box1-img" src="frontend/img/seat.png" alt="">
             </div>
             <div class="box1-title">COMFORTABLE</div>
             <div class="box1-content">We have very large leg space in between seats.You can spend 12 hours
@@ -209,7 +209,7 @@
         </div>
         <div class="col-md-3 col-sm-6 banner-section">
             <div class="box1-img-container">
-                <img class="box1-img" src="../../images/gps.png" alt="shohagh.com">
+                <img class="box1-img" src="frontend/img/gps.png" alt="">
             </div>
             <div class="box1-title">GPS NAVIGATION</div>
             <div class="box1-content">All of our buses are equipped with GPS and Camera for safety of the valued
@@ -218,16 +218,15 @@
         </div>
         <div class="col-md-3 col-sm-6 banner-section">
             <div class="box1-img-container">
-                <img class="box1-img" src="../../images/ticket.png" alt="shohagh.com">
+                <img class="box1-img" src="frontend/img/ticket.png" alt="">
             </div>
             <div class="box1-title">BUY TICKETS EASILY</div>
-            <div class="box1-content">You can buy ticket from our wide range of ticketing booth and online. You
-                can book your seat through our call center +8809606444777.
+            <div class="box1-content">You can buy ticket from our wide range of ticketing booth and online. 
             </div>
         </div>
         <div class="col-md-3 col-sm-6 banner-section">
             <div class="box1-img-container">
-                <img class="box1-img" src="../../images/entertainment.png" alt="shohagh.com">
+                <img class="box1-img" src="frontend/img/entertainment.png" alt="">
             </div>
             <div class="box1-title">ENTERTAINMENT ON BOARD</div>
             <div class="box1-content">Our buses are equipped with full HD Display and DVD player to play drama ,
@@ -246,7 +245,7 @@
             <div class="thumbnails thumbnail-style">
                 <div class="thumbnail-img">
                     <div class="overflow-hidden">
-                        <img class="img-responsive" src="../../images/Dhaka.png" alt="Dhaka">
+                        <img class="img-responsive" src="frontend/img/dhaka.jpg" alt="Dhaka">
                     </div>
                 </div>
                 <div class="caption">
@@ -258,7 +257,7 @@
             <div class="thumbnails thumbnail-style">
                 <div class="thumbnail-img">
                     <div class="overflow-hidden">
-                        <img class="img-responsive" src="../../images/Chittagong.png" alt="">
+                        <img class="img-responsive" src="frontend/img/Chittagongcity.jpg" alt="">
                     </div>
                 </div>
                 <div class="caption">
@@ -272,11 +271,11 @@
             <div class="thumbnails thumbnail-style">
                 <div class="thumbnail-img">
                     <div class="overflow-hidden">
-                        <img class="img-responsive" src="../../images/Jessore.png" alt="">
+                        <img class="img-responsive" src="frontend/img/barisal.jpg" alt="">
                     </div>
                 </div>
                 <div class="caption">
-                    <h3><a class="hover-effect" href="">Jessore</a></h3>
+                    <h3><a class="hover-effect" href="">Barisal</a></h3>
                 </div>
             </div>
         </div>
@@ -284,11 +283,11 @@
             <div class="thumbnails thumbnail-style">
                 <div class="thumbnail-img">
                     <div class="overflow-hidden">
-                        <img class="img-responsive" src="../../images/Khulna.png" alt="">
+                        <img class="img-responsive" src="frontend/img/srimagal.jpg" alt="">
                     </div>
                 </div>
                 <div class="caption">
-                    <h3><a class="hover-effect" href="">Khulna</a></h3>
+                    <h3><a class="hover-effect" href="">Srimangal</a></h3>
                 </div>
             </div>
         </div>
@@ -299,7 +298,7 @@
             <div class="thumbnails thumbnail-style">
                 <div class="thumbnail-img">
                     <div class="overflow-hidden">
-                        <img class="img-responsive" src="../../images/Coxsbazar-02.png" alt="">
+                        <img class="img-responsive" src="frontend/img/Cox1.jpg" alt="">
                     </div>
                 </div>
                 <div class="caption">
@@ -312,11 +311,11 @@
             <div class="thumbnails thumbnail-style">
                 <div class="thumbnail-img">
                     <div class="overflow-hidden">
-                        <img class="img-responsive" src="../../images/Satkhira-02.png" alt="">
+                        <img class="img-responsive" src="frontend/img/slyhlet.jpg" alt="">
                     </div>
                 </div>
                 <div class="caption">
-                    <h3><a class="hover-effect" href="">Satkhira</a>
+                    <h3><a class="hover-effect" href="">Sylhet</a>
                     </h3>
                 </div>
             </div>
@@ -326,11 +325,11 @@
             <div class="thumbnails thumbnail-style">
                 <div class="thumbnail-img">
                     <div class="overflow-hidden">
-                        <img class="img-responsive" src="../../images/Kolkata-02.png" alt="">
+                        <img class="img-responsive" src="frontend/img/Khulna.jpg" alt="">
                     </div>
                 </div>
                 <div class="caption">
-                    <h3><a class="hover-effect" href="">Kolkata</a>
+                    <h3><a class="hover-effect" href="">Khulna</a>
                     </h3>
                 </div>
             </div>
@@ -339,11 +338,11 @@
             <div class="thumbnails thumbnail-style">
                 <div class="thumbnail-img">
                     <div class="overflow-hidden">
-                        <img class="img-responsive" src="../../images/Benapole.png" alt="">
+                        <img class="img-responsive" src="frontend/img/rangamati.jpg" alt="">
                     </div>
                 </div>
                 <div class="caption">
-                    <h3><a class="hover-effect" href="">Benapole</a>
+                    <h3><a class="hover-effect" href="">Rangamati</a>
                     </h3>
                 </div>
             </div>

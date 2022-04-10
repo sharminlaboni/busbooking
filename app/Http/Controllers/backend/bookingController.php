@@ -20,15 +20,15 @@ public function BookingCreate(){
 public function BookingStore(Request $request){
     Booking::create([
         // coloum name of db || name of input field
-        'PNR'=> $request->PNR,
+        
         'busname'=>$request->busname,
-        'startingfrom'=>$request->startingfrom,
-        'destination'=>$request->destination,
+        'seatname'=>$request->seatname,
+        'time'=>$request->time,
         'date'=>$request->date,
-        'customername'=>$request->customername,
-        'customercontact'=>$request->customercontact,
-        'customeraddress'=>$request->customeraddress,
-       'payment'=>$request->payment,
+        'user'=>$request->user,
+        'Amount'=>$request->amount,
+        'status'=>$request->status,
+    
     ]);
     return redirect()->route('admin.Booking.show');
 }
