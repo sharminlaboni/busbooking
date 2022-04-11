@@ -8,10 +8,10 @@ use Illuminate\Http\Request;
 
 class BookingdetailsController extends Controller
 {
-    public function bookingdetails(){
-    $booking = Booking::all();
-    // dd($details);
-    // dd(auth()->user());
-    return view('frontend.pages.booking',compact('booking'));
-    }
+    // public function bookingdetails(){
+    // $booking = Booking::all();
+    // // dd($details);
+    // // dd(auth()->user());
+    // return view('frontend.pages.booking',compact('booking'));
+    // }
 }

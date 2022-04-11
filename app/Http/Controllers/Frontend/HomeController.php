@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Models\Time;
 use App\Http\Controllers\Controller;
 use App\Models\Booking;
+use App\Models\Counter;
 use App\Models\Route;
 use App\Models\Trip;
 use Illuminate\Http\Request;
@@ -34,7 +35,7 @@ class HomeController extends Controller
 
 
             ]);
-            return redirect()->back();
+            return redirect()->route('home');
         }
 
         public function login()
@@ -62,7 +63,7 @@ class HomeController extends Controller
     public function logout()
     {
         auth()->logout();
-        return redirect()->route('customer.login')->with('message','Logout Successful');
+        return redirect()->route('home')->with('message','Logout Successful');
     }
 
 
@@ -84,12 +85,20 @@ class HomeController extends Controller
     }
    public function viewseat($id)
    {
+
     //    dd($id);
-       return view('frontend.pages.view',compact('id'));
+    $trip = Trip::find($id);
+    $route = Route::where('id',$trip->route_id)->first();
+    $location = Location::where('id',$route->From_location_name)->first();
+    $counter = Counter::where('location_id',$location->id)->get();
+    $bookings = Booking::where('trip_id',$id)->get()->pluck('seat_number')->toArray();
+ 
+    
+    return view('frontend.pages.view',compact('id','counter','bookings'));
    } 
     public function seatstore(Request $request)
     {
-        // dd($request->all());
+        
         $trip = Trip::find($request->trip_id);
         // dd($trip);
         foreach ($request->seats as $key => $seat) {
@@ -97,6 +106,7 @@ class HomeController extends Controller
                 'user_id'=>auth()->user()->id,
                 'trip_id'=>$request->trip_id,
                 'seat_number'=>$seat,
+                'counter_id'=>$request->counter,
                 'date'=>$trip->date,
                 'totalAmount'=> $trip->price,
             ]);
@@ -107,8 +117,8 @@ class HomeController extends Controller
         
     }
     public function booking(){
-       $booking = Booking::with('user')->get();
-    //    dd($booking);
+       $booking = Booking::with(['user','counter'])->get();
+    // dd($booking);
        return view('frontend.pages.booking',compact('booking'));
     }
 }

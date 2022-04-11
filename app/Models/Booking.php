@@ -14,4 +14,9 @@ class Booking extends Model
         return $this->belongsTo(User::class);
     }
 
+    
+    public function counter(){
+        return $this->belongsTo(Counter::class);
+    }
+
 }

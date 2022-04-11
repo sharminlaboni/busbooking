@@ -14,6 +14,7 @@
       <th scope="col">#</th>
       <th scope="col"> counter_name</th>
       <th scope="col">counter_number</th>
+      <th scope="col">location</th>
       <th scope="col">Action</th>
     </tr>
   </thead>
@@ -24,7 +25,8 @@
     <tr>
       <th scope="row">{{$singlecounter->id}}</th>
       <td>{{$singlecounter->counter_name}}</td>
-      <td>{{$singlecounter->counter_number}}</td>
+      <td>{{$singlecounter->counter_number}}</td>   
+      <td>{{optional($singlecounter->route)->Location_name}}</td>
       <td>
           <a class="btn btn-primary" href="{{route('Counter.edit',$singlecounter->id)}}"
             >Edit</a>

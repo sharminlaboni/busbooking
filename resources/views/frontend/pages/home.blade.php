@@ -98,7 +98,7 @@
             
             </div>
         </fieldset>
-        <button type="submit">Submit</button>
+        <button type="submit">SEARCH</button>
 
     </form>
 </div>

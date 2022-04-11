@@ -17,6 +17,7 @@ class CreateCountersTable extends Migration
             $table->id();
             $table->string('counter_name');
             $table->integer('counter_number');
+            $table->foreignID('location_id');
             $table->timestamps();
         });
     }

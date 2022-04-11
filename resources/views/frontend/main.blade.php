@@ -48,6 +48,7 @@
 
 <link rel="stylesheet" href="{{url('frontend/css/bootstrap-timepicker.css')}}">
 <link rel="stylesheet" href="{{url('frontend/css/custom.css')}}">
+
 </head>
 
 <body>
@@ -511,6 +512,9 @@
 <!--[if lt IE 10]>
     <script src="/assets/plugins/sky-forms-pro/skyforms/js/jquery.placeholder.min.js"></script>
 <![endif]-->
+
+
+
 
 
 </body>

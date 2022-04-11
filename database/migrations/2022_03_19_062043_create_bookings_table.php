@@ -20,6 +20,8 @@ class CreateBookingsTable extends Migration
             $table->integer('trip_id');
             $table->string('seat_number');
             $table->date('date');
+            $table->integer('counter_id');
+            
             $table->double('totalAmount');
             
             $table->timestamps();

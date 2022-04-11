@@ -10,5 +10,10 @@ class Counter extends Model
     use HasFactory;
     protected $guarded=[];
 
+    public function  route()
+{
+    return $this ->belongsTo(Location::class,'location_id','id');
+}
+
 
 }

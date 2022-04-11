@@ -1,5 +1,5 @@
 <?php
-
+//admin
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\TripController;
 use App\Http\Controllers\Backend\RouteController;
@@ -11,6 +11,8 @@ use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\LocationController;
 use App\Http\Controllers\Backend\TimeController;
 use App\Http\Controllers\Backend\PaymentController;
+
+//website
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\BookingdetailsController;
 
@@ -69,24 +71,24 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'],function (){
     //return view('backend.pages.dashboard');
 
 
-Route::get('/Route',function(){
-    return view('backend.pages.Route.create');
+// Route::get('/Route',function(){
+//     return view('backend.pages.Route.create');
 
-});
+// });
 
 
 //Route::get('/booking',function(){
     //return view('backend.pages.booking');
 
 //});
-Route::get('/counter',function(){
-    return view('backend.pages.counter');
+// Route::get('/counter',function(){
+//     return view('backend.pages.counter');
 
-});
-Route::get('/payment',function(){
-    return view('backend.pages.payment');
+// });
+// Route::get('/payment',function(){
+//     return view('backend.pages.payment');
 
-});
+// });
 //Route::get('/customer',function(){
     //return view('backend.pages.customer');
 
@@ -146,6 +148,7 @@ Route::post('/Bus/store',[BusController::class,'BusStore'])->name('Bus.store');
 Route::get('/Bus/edit/{id}',[BusController::class,'busEdit'])->name('bus.edit');
 Route::put('/Bus/update',[BusController::class,'busUpdate'])->name('bus.update');
 Route::get('/Bus/delete/{id}',[BusController::class,'busDelete'])->name('bus.delete');
+//payment
 
 Route::get('/payment', [PaymentController::class,'payment'])->name('admin.payment');
 
@@ -159,7 +162,7 @@ Route::get('/time_list',[TimeController::class.'time'])->name('website.time.show
 Route::post('/customer/registration',[HomeController::class,'customerRegistration'])->name('customer.registration');
 Route::get('/customer/login',[HomeController::class,'login'])->name('customer.login');
 Route::post('/customer/do-login',[HomeController::class,'doLogin'])->name('customer.do.login');
-
+Route::get('customer/logout',[HomeController::class,'logout'])->name('customer.logout');
 
 Route::post('/search/',[HomeController::class,'Search'])->name('trip.search');
 Route::get('/view/{trip_id}',[HomeController::class,'viewseat'])->name('seat.view');

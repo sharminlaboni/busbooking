@@ -155,17 +155,13 @@
     <tr>
       <th scope="col">Name</th>
       <th scope="col">Email</th>
-      <th scope="col">seat name </th>
-      <th scope="col">Date</th> 
-      <th scope="col">Total amount</th>      
-      <th scope="col">Action</th>
-
-
-
-
-      
-      
-      
+      <th scope="col">seat name </th>     
+       <th scope="col">Counter</th>
+       
+       
+        <th scope="col">date</th> 
+     <th scope="col">Total amount</th>      
+      <th scope="col">Action</th>  
     </tr>
   </thead>
   <tbody>
@@ -176,8 +172,12 @@
       <td>{{$info->user->email}}</td>
       <td>{{$info->seat_number}}</td>
       <td>
+        {{$info->counter->counter_name}}
+      </td>
+      <td>
         {{$info->date}}
       </td>
+
       <td>{{$info->totalAmount}}</td>
       <td>
          <a class="btn btn-danger" href="">Payment</a>  

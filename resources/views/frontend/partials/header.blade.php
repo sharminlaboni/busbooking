@@ -74,9 +74,18 @@
                 <li class="">
                     <a href="/contactUs">Contact Us</a>
                 </li>
+                @if(auth()->user())
                  <li class="">
+                     <h3 class="btn btn-primary rounded">{{auth()->user()->name}}</h5>
+                </li>
+                <li>
+                    <a href="{{route('customer.logout')}}">Log out</a>
+                </li>
+                @else
+                <li class="">
                  <a href="{{route('customer.login')}}">Login</a>
                 </li>
+                @endif
             </ul>
         </div>
     </div>
