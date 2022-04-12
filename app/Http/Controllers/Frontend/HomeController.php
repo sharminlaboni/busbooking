@@ -10,6 +10,7 @@ use App\Models\Counter;
 use App\Models\Route;
 use App\Models\Trip;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -65,7 +66,14 @@ class HomeController extends Controller
         auth()->logout();
         return redirect()->route('home')->with('message','Logout Successful');
     }
-
+    public  function myprofile()
+    {
+        // dd(auth()->user());
+        $user = auth()->user();
+        $booking = Booking::where('user_id',auth()->user()->id)->get();
+        //dd($booking);
+        return view('frontend.pages.myprofile',compact('user','booking'));
+    }
 
         
     
@@ -117,8 +125,11 @@ class HomeController extends Controller
         
     }
     public function booking(){
-       $booking = Booking::with(['user','counter'])->get();
-    // dd($booking);
+
+       
+        $booking=Booking::query()->with('user','counter')->get()->groupBy('user_id','trip_id');
+    
+
        return view('frontend.pages.booking',compact('booking'));
     }
 }

@@ -153,40 +153,46 @@
 <table class="table table-striped table-bordered table-hover">
     <thead>
     <tr>
+      <th scope="col">SL</th>
       <th scope="col">Name</th>
-      <th scope="col">Email</th>
       <th scope="col">seat name </th>     
        <th scope="col">Counter</th>
        
        
-        <th scope="col">date</th> 
-     <th scope="col">Total amount</th>      
+        <th scope="col">Total amount</th> 
+     <th scope="col">Date</th>      
       <th scope="col">Action</th>  
     </tr>
   </thead>
   <tbody>
-      <!-- @if($booking->count()>0) -->
-    @foreach($booking as $info)
-    <tr>
-      <td>{{$info->user->name}}</td>
-      <td>{{$info->user->email}}</td>
-      <td>{{$info->seat_number}}</td>
-      <td>
-        {{$info->counter->counter_name}}
-      </td>
-      <td>
-        {{$info->date}}
-      </td>
+    @foreach($booking as $key=>$book)
 
-      <td>{{$info->totalAmount}}</td>
+    <tr>
+        <td>{{$key+1}}</td>
+   
+      <td>{{$book[$key]->user->name}}</td>
+      <td>
+      @foreach($book as $data)
+       <p> {{$data->seat_number}}</p>
+      @endforeach
+      </td>
+        
+      
+      <td>
+            {{$book[$key]->counter->counter_name}}
+        </td>
+        <td>{{$book[$key]->totalAmount}}</td>
+        <td>
+        {{$book[$key]->date}}
+      </td>
       <td>
          <a class="btn btn-danger" href="">Payment</a>  
       </td>
-    </tr>
     @endforeach
-    <!-- @else
-    <tr>No ticket</tr>
-    @endif -->
+    </tr>
+    
+  
+    
   </tbody>
   
  

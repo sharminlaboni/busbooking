@@ -27,7 +27,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-6 text-center mb-5">
-                <h2 class="heading-section">Login #05</h2>
+                <h2 class="heading-section">  AdminLogin </h2>
             </div>
         </div>
 
@@ -53,6 +53,7 @@
                         </div>
                         <div class="d-flex">
                             <div class="w-100">
+                                <!-- <img src="frontend/img/profile.png" alt="profile"> -->
                                 <h3 class="mb-4">Sign In</h3>
                             </div>
                             <div class="w-100">

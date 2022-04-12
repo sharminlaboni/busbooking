@@ -163,6 +163,9 @@ Route::post('/customer/registration',[HomeController::class,'customerRegistratio
 Route::get('/customer/login',[HomeController::class,'login'])->name('customer.login');
 Route::post('/customer/do-login',[HomeController::class,'doLogin'])->name('customer.do.login');
 Route::get('customer/logout',[HomeController::class,'logout'])->name('customer.logout');
+Route::get('customer/profile',[HomeController::class,'myprofile'])->name('customer.profile');
+
+
 
 Route::post('/search/',[HomeController::class,'Search'])->name('trip.search');
 Route::get('/view/{trip_id}',[HomeController::class,'viewseat'])->name('seat.view');

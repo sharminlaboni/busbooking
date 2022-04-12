@@ -74,6 +74,9 @@
                 <li class="">
                     <a href="/contactUs">Contact Us</a>
                 </li>
+                <li class="">
+                    <a href="{{route('customer.profile')}}">My profile</a>
+                </li>
                 @if(auth()->user())
                  <li class="">
                      <h3 class="btn btn-primary rounded">{{auth()->user()->name}}</h5>
