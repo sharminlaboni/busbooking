@@ -166,11 +166,11 @@
   </thead>
   <tbody>
     @foreach($booking as $key=>$book)
-
-    <tr>
-        <td>{{$key+1}}</td>
    
-      <td>{{$book[$key]->user->name}}</td>
+    <tr>
+        <td>{{$key}}</td>
+   
+      <td>{{$booking[$key]->first()->user->name}}</td>
       <td>
       @foreach($book as $data)
        <p> {{$data->seat_number}}</p>
@@ -179,11 +179,14 @@
         
       
       <td>
-            {{$book[$key]->counter->counter_name}}
+            {{$booking[$key]->first()->counter->counter_name}}
         </td>
-        <td>{{$book[$key]->totalAmount}}</td>
+        <td>{{$booking[$key]->first()->totalAmount}}</td>
         <td>
-        {{$book[$key]->date}}
+        {{$booking[$key]->first()->date}}
+      </td>
+      <td>
+         <a class="btn btn-primary" href="">view</a>  
       </td>
       <td>
          <a class="btn btn-danger" href="">Payment</a>  

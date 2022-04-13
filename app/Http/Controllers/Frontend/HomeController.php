@@ -79,7 +79,7 @@ class HomeController extends Controller
     
     public function Search(Request $request)
     {
-        //  dd(($id)); 
+        // dd(($request->all())); 
         $route = Route::where('From_location_name',$request->fromAreaCode)
         ->where('To_location_name',$request->toAreaCode)
         ->first();
@@ -125,11 +125,9 @@ class HomeController extends Controller
         
     }
     public function booking(){
-
        
         $booking=Booking::query()->with('user','counter')->get()->groupBy('user_id','trip_id');
-    
-
+     
        return view('frontend.pages.booking',compact('booking'));
     }
 }

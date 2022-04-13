@@ -207,14 +207,14 @@
                 without any discomfort in our seats
             </div>
         </div>
-        <div class="col-md-3 col-sm-6 banner-section">
+          <div class="col-md-3 col-sm-6 banner-section">
             <div class="box1-img-container">
                 <img class="box1-img" src="frontend/img/gps.png" alt="">
             </div>
             <div class="box1-title">GPS NAVIGATION</div>
             <div class="box1-content">All of our buses are equipped with GPS and Camera for safety of the valued
                 passenger.
-            </div>
+            </div>  
         </div>
         <div class="col-md-3 col-sm-6 banner-section">
             <div class="box1-img-container">

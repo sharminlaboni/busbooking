@@ -14,24 +14,24 @@ class BookingController extends Controller
         return view('backend.pages.Booking.Booklist',compact('books'));
 
 }
-public function BookingCreate(){
-    return view('backend.pages.Booking.Create');
-}
-public function BookingStore(Request $request){
-    Booking::create([
-        // coloum name of db || name of input field
+// public function BookingCreate(){
+//     return view('backend.pages.Booking.Create');
+// }
+// public function BookingStore(Request $request){
+//     Booking::create([
+//         // coloum name of db || name of input field
         
-        'busname'=>$request->busname,
-        'seatname'=>$request->seatname,
-        'time'=>$request->time,
-        'date'=>$request->date,
-        'user'=>$request->user,
-        'Amount'=>$request->amount,
-        'status'=>$request->status,
+//              'user_id'=>auth()->user()->id,
+//              'trip_id'=>$request->trip_id,
+//                 'seat_number'=>$request->seat,
+//              'counter_id'=>$request->counter,
+//               'date'=>$request->date,
+//             'totalAmount'=> $request->price,
+            
     
-    ]);
-    return redirect()->route('admin.Booking.show');
-}
+    // ]);
+    // return redirect()->route('admin.Booking.show');
+
 
     
 }

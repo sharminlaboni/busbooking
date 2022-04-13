@@ -32,13 +32,11 @@ use App\Http\Controllers\Frontend\BookingdetailsController;
 
 
 
-
-
 //admin login
 Route::get('/admin/login',[UserController::class,'login'])->name('admin.login');
 Route::post('/admin/do-login',[UserController::class,'doLogin'])->name('admin.do.login');
 
-Route::group(['prefix'=>'admin','middleware'=>'auth'],function (){   
+Route::group(['prefix'=>'admin','middleware'=>'admin'],function (){   
      Route::get('/logout',[UserController::class,'logout'])->name('admin.logout');
 
 
@@ -168,6 +166,8 @@ Route::get('customer/profile',[HomeController::class,'myprofile'])->name('custom
 
 
 Route::post('/search/',[HomeController::class,'Search'])->name('trip.search');
+Route::group(['middleware'=>'auth'],function (){   
+
 Route::get('/view/{trip_id}',[HomeController::class,'viewseat'])->name('seat.view');
 Route::post('/view/store',[HomeController::class,'seatstore'])->name('seat.store');
 Route::get('/booking',[HomeController::class,'booking'])->name('book.view');
@@ -176,5 +176,5 @@ Route::get('/booking',[HomeController::class,'booking'])->name('book.view');
 
 Route::get('/booking/details',[BookingdetailsController::class,'bookingdetails'])->name('booking.details');
 
-
+});
 
