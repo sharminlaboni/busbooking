@@ -166,7 +166,6 @@
   </thead>
   <tbody>
     @foreach($booking as $key=>$book)
-   
     <tr>
         <td>{{$key}}</td>
    
@@ -186,7 +185,7 @@
         {{$booking[$key]->first()->date}}
       </td>
       <td>
-         <a class="btn btn-primary" href="">view</a>  
+         <a class="btn btn-primary" href="{{route('view.invoice',$booking[$key]->first()->id)}}">view invoice</a>  
       </td>
       <td>
          <a class="btn btn-danger" href="">Payment</a>  

@@ -174,7 +174,7 @@ Route::get('/booking',[HomeController::class,'booking'])->name('book.view');
 
 
 
-Route::get('/booking/details',[BookingdetailsController::class,'bookingdetails'])->name('booking.details');
+Route::get('/view/invoice/{id}',[BookingdetailsController::class,'viewinvoivce'])->name('view.invoice');
 
 });
 

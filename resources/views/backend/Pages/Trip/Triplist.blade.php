@@ -16,8 +16,8 @@
       <th scope="col">Bus_name</th>
       <th scope="col">bus_type</th>
 
-      <th scope="col">route </th>
       <th scope="col">date</th>
+      <th scope="col">route</th>
 
       <th scope="col">time</th>
       <th scope="col">details</th>
