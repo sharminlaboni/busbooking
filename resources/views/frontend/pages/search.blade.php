@@ -65,6 +65,10 @@
                                         {{$info->Bus->Bus_name}}
  
                                         </div>
+                                        <div class="fw-tripinfo-busstation">
+                                        {{$info->date}}
+ 
+                                        </div>
                                         <div class="fw-tripinfo-label" style="padding-top: 10px;">
                                         {{$info->bus_type}}
  

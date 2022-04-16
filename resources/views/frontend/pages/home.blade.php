@@ -61,7 +61,7 @@
             <section class="col-md-6 col-sm-6 col-xs-12 col-lg-2">
                 <label class="input">
                     <i class="icon-append fa fa-calendar"></i>
-                    <input readonly type="text" name="travelDate" id="date" data-date-start-date="+0d" placeholder="Trip Date" value="05/04/2022">
+                    <input type="date" name="travelDate" id="date" data-date-start-date="+0d" placeholder="Trip Date" value="">
                 </label>
             </section>
 

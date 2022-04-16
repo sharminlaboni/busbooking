@@ -9,6 +9,7 @@ use App\Models\Booking;
 use App\Models\Counter;
 use App\Models\Route;
 use App\Models\Trip;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -79,12 +80,18 @@ class HomeController extends Controller
     
     public function Search(Request $request)
     {
-        // dd(($request->all())); 
+        // dd($request->all());
+        $date = date('Y-m-d',strtotime($request->travelDate));
+        // dd($date);
         $route = Route::where('From_location_name',$request->fromAreaCode)
         ->where('To_location_name',$request->toAreaCode)
         ->first();
         if ($route) {
-            $trips = Trip::where('route_id', $route->id)->get();
+            $trips = Trip::where('route_id', $route->id)
+                            ->whereDate('date',$date)
+                            ->where('time_id',$request->timePeriod)
+                            ->get();
+                            // dd($trips);
             return view('frontend.pages.search',compact('trips'));
         }
         return redirect()->back();
