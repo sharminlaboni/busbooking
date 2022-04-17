@@ -98,6 +98,10 @@ Route::post('/route/post',[RouteController::class,'routePost'])->name('route.pos
 Route::get('/Route/edit/{id}',[RouteController::class,'routeEdit'])->name('route.edit');
 Route::put('/Route/update',[RouteController::class,'routeUpdate'])->name('route.update');
 Route::get('/Route/delete/{id}',[RouteController::class,'routeDelete'])->name('route.delete');
+//
+Route::get('/dashboard',[UserController::class,'dashboard'])->name('admin.dashboard');
+
+
 
 
 //trip
@@ -110,8 +114,8 @@ Route::get('/trip/delete/{id}',[TripController::class,'tripDelete'])->name('trip
 Route::get('/user/list',[UserController::class,'list'])->name('user.list');
 //booking
 Route::get('/Booking/show',[BookingController::class,'Booking'])->name('admin.Booking.show');
-Route::get('/Booking/create',[BookingController::class,'BookingCreate'])->name('Booking.create');
-Route::post('/Booking/store',[BookingController::class,'BookingStore'])->name('Booking.store');
+// Route::get('/Booking/create',[BookingController::class,'BookingCreate'])->name('Booking.create');
+// Route::post('/Booking/store',[BookingController::class,'BookingStore'])->name('Booking.store');
 //customer
 Route::get('/Customer/show',[CustomerController::class,'Customer'])->name('admin.Customer.show');
 Route::get('/Customer/create',[CustomerController::class,'CustomerCreate'])->name('Customer.create');
@@ -156,7 +160,7 @@ Route::get('/payment', [PaymentController::class,'payment'])->name('admin.paymen
 Route::get('/',[HomeController::class,'home'])->name('home');
 Route::get('/location_list',[LocationController::class.'location_name'])->name('website.location.show');
 Route::get('/time_list',[TimeController::class.'time'])->name('website.time.show');
-
+//customer log in
 Route::post('/customer/registration',[HomeController::class,'customerRegistration'])->name('customer.registration');
 Route::get('/customer/login',[HomeController::class,'login'])->name('customer.login');
 Route::post('/customer/do-login',[HomeController::class,'doLogin'])->name('customer.do.login');
@@ -164,16 +168,16 @@ Route::get('customer/logout',[HomeController::class,'logout'])->name('customer.l
 Route::get('customer/profile',[HomeController::class,'myprofile'])->name('customer.profile');
 
 
-
+//search trip
 Route::post('/search/',[HomeController::class,'Search'])->name('trip.search');
 Route::group(['middleware'=>'auth'],function (){   
-
+//viewseat
 Route::get('/view/{trip_id}',[HomeController::class,'viewseat'])->name('seat.view');
+//booking store
 Route::post('/view/store',[HomeController::class,'seatstore'])->name('seat.store');
+//viewbooking
 Route::get('/booking',[HomeController::class,'booking'])->name('book.view');
-
-
-
+//viewinvoice
 Route::get('/view/invoice/{id}',[BookingdetailsController::class,'viewinvoivce'])->name('view.invoice');
 
 });

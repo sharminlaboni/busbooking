@@ -151,7 +151,7 @@
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <h2 style="text-align: center;font-size: 20px;font-weight: 300">HOW TO BUY TICKET</h2>
             </div>
-            <div class="modal-body">
+            <!-- <div class="modal-body">
                 <div class="row row-design">
                     <div class="col-md-12 alignment">
                         <div class="design">
@@ -233,7 +233,7 @@
                 </div>
 
 
-            </div>
+            </div> -->
         </div>
     </div>
 </div>
@@ -247,7 +247,7 @@
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <h2 style="text-align: center;font-size: 20px;font-weight: 300">HOW TO CANCEL TICKET</h2>
             </div>
-            <div class="modal-body">
+            <!-- <div class="modal-body">
                 <div class="row row-design">
                     <div class="col-md-12 alignment">
                         <div class="design">
@@ -281,7 +281,7 @@
                 </div>
 
 
-            </div>
+            </div> -->
         </div>
     </div>
 </div>

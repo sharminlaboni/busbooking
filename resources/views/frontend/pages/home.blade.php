@@ -8,16 +8,16 @@
 </div>
 <div class="tab">
     <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 no-padding">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
             <button class="tablinks btn-block" onclick="openTab(event, 'one')" id="defaultOpen">
                 <i class="fa fa-ticket"></i> Buy Ticket
             </button>
         </div>
-        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  no-padding">
+        <!-- <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  no-padding">
             <button class="tablinks btn-block" onclick="openTab(event, 'two')" id="manageTicket">
                 <i class="fa fa-cog"> </i> Ticket Operation
             </button>
-        </div>
+        </div> -->
     </div>
 </div>
 <div id="one" class="tabcontent">
@@ -168,34 +168,12 @@
 
 
 </div>
-<!--/row-->
-<!-- End Purchase Block -->
+
 
 <!--=== Content Part ===-->
 <div class="container content-sm" style="margin-top: -20px">
 
-    <!-- <div class="row">
-        <div class="margine10">
-            <div class="col-sm-2">
-            </div>
-            <div class="col-sm-4">
-                <button class="btn btn-success form-control" style="height: 45px" data-toggle="modal" data-target="#matchedWarnings">
-                    <span class="buttonBuy">HOW TO BUY TICKET</span>
-                </button>
-            </div>
-        </div>
-        <div class="margine10">
-            <div class="col-sm-4">
-                <button class="btn btn-warning form-control" style="height: 45px" data-toggle="modal" data-target="#howToCancelTicket">
-                    <span class="buttonBuy">HOW TO CANCEL TICKET</span>
-                </button>
-            </div>
-            <div class="col-sm-2">
-            </div>
-        </div>
-    </div> -->
-    <!-- End Service Blokcs -->
-
+   
     <h2 class="h2-heading" style="margin-top: 50px;margin-bottom: 50px">WHY Online Bus Tiket Reservation</h2>
     <div class="row banner-wrap">
         <div class="col-md-3 col-sm-6 banner-section">
@@ -359,7 +337,7 @@
 
 
 </div>
-<!--/container-->
+
 <!-- End Content Part -->
 
 @endsection

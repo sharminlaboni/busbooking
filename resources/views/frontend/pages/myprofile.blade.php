@@ -1,5 +1,5 @@
 
- <style>
+ <!-- <style>
 body {
     background: rgb(99, 39, 120)
 }
@@ -44,7 +44,7 @@ body {
     cursor: pointer;
     border: solid 1px #BA68C8
 } 
-</style>
+</style> -->
 <div class="container rounded bg-white mt-5 mb-5">
     <div class="row">
         <div class="col-md-3 border-right">
@@ -61,11 +61,17 @@ body {
                 <div class="row mt-3">
                     <div class="col-md-12"><label class="labels">Email</label><input type="text" class="form-control" placeholder="enter email " value="{{$user->email}}"></div>
                 </div>
+                <div class="row mt-3">
+                    <div class="col-md-12"><label class="labels">contact</label><input type="integer" class="form-control" placeholder="enter contact " value="{{$user->contact}}"></div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-12"><label class="labels">Address</label><input type="text" class="form-control" placeholder="enter Address " value="{{$user->address}}"></div>
+                </div>
                 <!-- <div class="row mt-3">
                     <div class="col-md-6"><label class="labels"></label><input type="text" class="form-control" placeholder="country" value=""></div>
                     <div class="col-md-6"><label class="labels">State/Region</label><input type="text" class="form-control" value="" placeholder="state"></div>
                 </div> -->
-                <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Save Profile</button></div>
+                <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Update Profile</button></div>
             </div>
         </div>
         <div class="col-md-4">
@@ -76,6 +82,7 @@ body {
 </div>
 </div>
 <table class="table table-striped table-bordered table-hover">
+    <h3 class="text-center">My Booking</h3>
     <thead>
     <tr>
        <th scope="col">Name</th> 

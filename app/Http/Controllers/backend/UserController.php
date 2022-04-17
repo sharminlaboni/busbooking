@@ -5,6 +5,13 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Trip;
+use App\Models\Booking;
+use App\Models\Route;
+
+
+
+
 
 
 
@@ -40,6 +47,17 @@ class UserController extends Controller
     public function list(){
         $users=User :: all();
         return view('backend.Pages.user.list',compact('users'));
+    }
+    public function dashboard()
+    {
+        $total_trip=Trip::all()->count();
+        $total_customer=User::where('role','customer')->count();
+        $total_booking=Booking::all()->count();
+        $total_route=Route::all()->count();
+
+
+
+        return view('backend.pages.dashboard',compact('total_trip','total_customer','total_booking','total_route'));
     }
     
     //

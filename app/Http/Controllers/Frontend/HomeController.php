@@ -27,6 +27,9 @@ class HomeController extends Controller
                 'name'=>'required',
                 'email'=>'required|email',
                 'password'=>'required',
+                'contact'=>'required',
+                'address'=>'required',
+
 
             ]);
             User::create([
@@ -34,6 +37,9 @@ class HomeController extends Controller
                 'email'=>$request->email,
                 'password'=>bcrypt($request->password),
                 'role'=>'customer',
+                'contact'=>$request->contact,
+                'address'=>$request->address,
+
 
 
             ]);

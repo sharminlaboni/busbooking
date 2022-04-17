@@ -20,9 +20,18 @@
                 <input class="form -control" type="email" required name="email" placeholder="Enter email">
             </div>
             <div class="form-group">
+                <label form="">Enter customer Address</label>
+                <input class="form -control" type="address" required name="address" placeholder="Enter Address">
+            </div>
+            <div class="form-group">
+                <label form="">Enter customer contact</label>
+                <input class="form -control" type="contact" required name="contact" placeholder="Enter contact">
+            </div>
+            <div class="form-group">
                 <label form="">Enter customer password</label>
                 <input class="form -control" type="password" required name="password" placeholder="Enter password">
             </div>  
+
         <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <button type="submit" class="btn btn-primary">Submit</button>

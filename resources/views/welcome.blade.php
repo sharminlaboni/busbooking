@@ -27,7 +27,7 @@
       opacity: 0 !important
     }
   </style>
-  <script>
+  <!-- <script>
     (function(a, s, y, n, c, h, i, d, e) {
       s.className += ' ' + y;
       h.start = 1 * new Date;
@@ -44,8 +44,8 @@
       'GTM-K9BGS8K': true
     });
   </script>
-  <!-- Analytics-Optimize Snippet -->
-  <script>
+   Analytics-Optimize Snippet -->
+   <!-- <script>
     (function(i, s, o, g, r, a, m) {
       i['GoogleAnalyticsObject'] = r;
       i[r] = i[r] || function() {
@@ -65,10 +65,10 @@
     ga('require', 'displayfeatures');
     ga('require', 'linker');
     ga('linker:autoLink', ["2checkout.com", "avangate.com"]);
-  </script>
-  <!-- end Analytics-Optimize Snippet -->
+  </script> -->
+  <!-- end Analytics-Optimize Snippet --> 
   <!-- Google Tag Manager -->
-  <script>
+   <!-- <script> 
     (function(w, d, s, l, i) {
       w[l] = w[l] || [];
       w[l].push({
@@ -83,7 +83,7 @@
         'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
       f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-NKDMSK6');
-  </script>
+  </script>   -->
   <!-- End Google Tag Manager -->
 </head>
 
@@ -134,7 +134,7 @@
   <script src="{{url('backend/js/perfect-scrollbar.min.js')}}"></script>
   <script src="{{url('backend/js/smooth-scrollbar.min.js')}}"></script>
   <script src="{{url('backend/js/chartjs.min.js')}}"></script>
-  <script>
+  <!-- <script>
     var ctx = document.getElementById("chart-bars").getContext("2d");
 
     new Chart(ctx, {
@@ -288,7 +288,7 @@
         },
       },
     });
-  </script>
+  </script> -->
   <script>
     var win = navigator.platform.indexOf('Win') > -1;
     if (win && document.querySelector('#sidenav-scrollbar')) {

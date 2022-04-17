@@ -12,29 +12,30 @@
 
       <th scope="col">customer name</th>
       <th scope="col">customer email</th>
-      <th scope="col">seat name</th>
+      <th scope="col">Address</th>
+      <th scope="col">Contact</th>
+      <th scope="col">seat number</th>
+      <th scope="col">date</th>
       <th scope="col">counter</th>
       <th scope="col">Total amount</th>
-      <th scope="col">Date</th>
+      
       
     </tr>
   </thead>
   <tbody>
   
 
-  @foreach($books as $singlebook)
+  @foreach($booking as $singlebook)
     <tr>
       <th scope="row">1</th>
-      
-
-      <td>{{$singlebook->name}}</td>
-      <td>{{$singlebook->email}}</td>
-      <td>{{$singlebook->seat name}}</td>
-
-      <td>{{$singlebook->time}}</td>
+      <td>{{$singlebook->user->name}}</td>
+      <td>{{$singlebook->user->email}}</td>
+      <td>{{$singlebook->user->address}}</td>
+      <td>{{$singlebook->user->contact}}</td>
+        <td>{{$singlebook->seat_number}}</td>
       <td>{{$singlebook->date}}</td>
-      <td>{{$singlebook>counter}}</td>
-      <td>{{$singleBiscuit->TotalAmount}}</td>
+      <td>{{$singlebook->counter->counter_name}}</td>
+      <td>{{$singlebook->totalAmount}}</td>
 
     </tr>
     @endforeach

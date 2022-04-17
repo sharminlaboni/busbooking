@@ -10,8 +10,8 @@ use App\Models\Booking;
 class BookingController extends Controller
 {
     public function Booking(){   
-        $books = Booking::all();
-        return view('backend.pages.Booking.Booklist',compact('books'));
+        $booking = Booking::all();
+        return view('backend.pages.Booking.Booklist',compact('booking'));
 
 }
 // public function BookingCreate(){
