@@ -10,6 +10,7 @@ use App\Http\Controllers\Backend\CounterController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\LocationController;
 use App\Http\Controllers\Backend\TimeController;
+use App\Http\Controllers\Backend\DriverController;
 use App\Http\Controllers\Backend\PaymentController;
 
 //website
@@ -135,6 +136,10 @@ Route::get('/Location/delete/{id}',[LocationController::class,'LocationDelete'])
 Route::get('/time/show',[TimeController::class,'time'])->name('admin.time.show');
 Route::get('/time/create',[TimeController::class,'timeCreate'])->name('time.create');
 Route::post('/time/store',[TimeController::class,'timeStore'])->name('time.store');
+//Driver
+Route::get('/driver/show',[DriverController::class,'driver'])->name('admin.driver.show');
+Route::get('/driver/create',[DriverController::class,'driverCreate'])->name('driver.create');
+Route::post('/driver/store',[DriverController::class,'driverStore'])->name('driver.store');
 
 //counter
 Route::get('/Counter/show',[CounterController::class,'Counter'])->name('admin.Counter.show');
@@ -179,6 +184,7 @@ Route::post('/view/store',[HomeController::class,'seatstore'])->name('seat.store
 Route::get('/booking',[HomeController::class,'booking'])->name('book.view');
 //viewinvoice
 Route::get('/view/invoice/{id}',[BookingdetailsController::class,'viewinvoivce'])->name('view.invoice');
-
+//ticket
+Route::get('/view/ticket',[BookingdetailsController::class,'viewticket'])->name('view.ticket');
 });
 

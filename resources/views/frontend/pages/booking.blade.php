@@ -170,6 +170,7 @@
         <td>{{$key}}</td>
    
       <td>{{$booking[$key]->first()->user->name}}</td>
+      
       <td>
       @foreach($book as $data)
        <p> {{$data->seat_number}}</p>
@@ -188,12 +189,13 @@
          <a class="btn btn-primary" href="{{route('view.invoice',$booking[$key]->first()->id)}}">view invoice</a>  
       </td>
       <td>
+         <a class="btn btn-danger" href="">Ticket</a>  
+      </td>
+      <td>
          <a class="btn btn-danger" href="">Payment</a>  
       </td>
     @endforeach
     </tr>
-    
-  
     
   </tbody>
   

@@ -2,7 +2,10 @@
         <div class="card"  id="invoice">
             <div class="card-header">
                 Invoice
+                
+                <div>
                 <strong>{{$booking->created_at}}</strong>
+               </div> 
 
             </div>
             <div class="card-body">
@@ -20,10 +23,9 @@
 
                     <div class="col-sm-6">
                         <h6 class="mb-3">To:</h6>
-                       
                         <div>{{$booking->user->name}}</div>
-                        <div>Email:{{$booking->user_email}}</div>
-                    </div>
+                        <div>Email:{{$booking->user->email}}</div>
+                        </div>
 
 
 
