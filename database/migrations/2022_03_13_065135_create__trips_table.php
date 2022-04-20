@@ -23,7 +23,7 @@ class CreateTripsTable extends Migration
             $table->foreignID('time_id');
             $table->string('details');          
             $table->string('image')->nullable();
-             $table->double('price');
+            $table->double('price',10,2);
         
             $table->timestamps();
         });

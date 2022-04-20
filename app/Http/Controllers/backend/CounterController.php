@@ -38,8 +38,9 @@ class CounterController extends Controller
     
     public function CounterEdit($id){
         $counters=Counter::find($id);
+        $locations =Location::all();
         if ($counters) {
-        return view('backend.pages.Counter.edit',compact('counters'));
+        return view('backend.pages.Counter.edit',compact('counters','locations'));
         } else {
             return redirect()->back();
         }
@@ -48,6 +49,8 @@ class CounterController extends Controller
     public function CounterUpdate(Request $request){
         // dd($request->all());
         $counters = Counter::find($request->id);
+        $locations =Location::all();
+
         if ($counters) { 
             $counters->update([
             'counter_name'=> $request->counter_name,

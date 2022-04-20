@@ -43,9 +43,7 @@
                                         {{$info->bus_type}}
  
                                         </div>
-                                        <div class="fw-tripinfo-destination">
-                                            DHAKA
-                                        </div> 
+                                       
                                     </div>
                                     <div class="fw-fareinfo col-md-2">
                                         <div class="fw-tripinfo-label">

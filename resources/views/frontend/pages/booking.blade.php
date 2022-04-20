@@ -157,7 +157,7 @@
       <th scope="col">Name</th>
       <th scope="col">seat name </th>     
        <th scope="col">Counter</th>
-       
+       <th scope="col">Status</th>
        
         <th scope="col">Total amount</th> 
      <th scope="col">Date</th>      
@@ -181,6 +181,11 @@
       <td>
             {{$booking[$key]->first()->counter->counter_name}}
         </td>
+        <td>
+            {{$booking[$key]->first()->booking_status}}
+        </td>
+        
+
         <td>{{$booking[$key]->first()->totalAmount}}</td>
         <td>
         {{$booking[$key]->first()->date}}
@@ -189,11 +194,9 @@
          <a class="btn btn-primary" href="{{route('view.invoice',$booking[$key]->first()->id)}}">view invoice</a>  
       </td>
       <td>
-         <a class="btn btn-danger" href="">Ticket</a>  
+         <a class="btn btn-danger" href="{{route('show.ticket')}}">Ticket</a>  
       </td>
-      <td>
-         <a class="btn btn-danger" href="">Payment</a>  
-      </td>
+      
     @endforeach
     </tr>
     

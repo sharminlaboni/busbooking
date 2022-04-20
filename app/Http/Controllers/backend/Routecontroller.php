@@ -38,21 +38,22 @@ class RouteController extends Controller
     public function routeEdit($id){
 
         $routes = Route::find($id);
+        $locations = Location::all();
         if ($routes) {
-        return view('backend.pages.route.edit',compact('routes'));
+        return view('backend.pages.route.edit',compact('routes','locations'));
         } else {
             return redirect()->back();
         }
         
 }
 public function routeUpdate(Request $request){
-    // dd($request->all());
-    $routes = route::find($request->route_id);
+    //  dd($request->all());
+    $locations = Location::all();
+    $routes = Route::find($request->route_id);
     if ($routes) {
         $routes->update([
-            'From_location_name'=>$request->From_location_name,
-            'To_location_name'=>$request->To_location_name,
-            
+            'From_location_name'=>$request->From_Location_id,
+            'To_location_name'=>$request->To_Location_id,
         ]);
         return redirect()->route('admin.route.show');
     } else {

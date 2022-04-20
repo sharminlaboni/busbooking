@@ -8,6 +8,7 @@ use App\Models\User;
 use App\Models\Trip;
 use App\Models\Booking;
 use App\Models\Route;
+use Carbon\Carbon;
 
 
 
@@ -59,6 +60,19 @@ class UserController extends Controller
 
         return view('backend.pages.dashboard',compact('total_trip','total_customer','total_booking','total_route'));
     }
+
+    public function report()
+    {
     
-    //
+    return view('backend.pages.Report.report');
+}
+public function tripreport(Request $request){
+    // dd($request->all());
+
+    $toDate = Carbon::parse($request->to_date)->addDay();
+    $trips = Trip::WhereBetween('created_at',[$request->from_date,$toDate])->get();
+    return view('backend.pages.Report.tripreport',compact('trips'));
+
+}
+
 }

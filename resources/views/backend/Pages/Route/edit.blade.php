@@ -5,16 +5,26 @@
     <input type="hidden" value="{{$routes->id}}" name="route_id">
 
 @csrf
-
-
 <div class="from-group">
-        <lable for="exampleInputEmail">From_location_name</lable>
-        <input name="From_location_name" type="text" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp"placeholder="Details">
+        <label for="exampleInputEmail">From_location_name</label>
+        <select class="form-control" name="From_Location_id" id="">
+            @foreach($locations as $singleLocation)
+            <option value="{{$singleLocation->id}}">{{$singleLocation->Location_name}}</option>
+            @endforeach
+        </select>
+
 
 </div>
+
 <div class="from-group">
         <lable for="exampleInputEmail">To_location_name</lable>
-        <input name="To_location_name" type="text" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp"placeholder="Details">
+        <select class="form-control" name="To_Location_id" id="">
+            @foreach($locations as $singleLocation)
+            <option value="{{$singleLocation->id}}">{{$singleLocation->Location_name}}</option>
+            @endforeach
+        </select>
+
+
         
 </div>
 <button type="submit" class="btn btn-primary">submit</button>

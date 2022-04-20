@@ -9,8 +9,8 @@ use App\Models\Payment;
 
 class PaymentController extends Controller
 {
-    public function payment(){
-        $payment = Payment::all();
-        return view('backend.pages.Payment.payment',compact('payment'));
-    }
+    // public function payment(){
+    //     $payment = Payment::all();
+    //     return view('backend.pages.Payment.payment',compact('payment'));
+    // }
 }

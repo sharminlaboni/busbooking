@@ -21,6 +21,8 @@ class CreateBookingsTable extends Migration
             $table->string('seat_number');
             $table->date('date');
             $table->integer('counter_id');
+            $table->string('booking_status')->default('pending');
+            $table->string('tran_id');
             
             $table->double('totalAmount');
             

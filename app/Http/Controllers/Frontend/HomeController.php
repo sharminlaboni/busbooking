@@ -128,6 +128,8 @@ class HomeController extends Controller
                 'trip_id'=>$request->trip_id,
                 'seat_number'=>$seat,
                 'counter_id'=>$request->counter,
+                'booking_status'=>'pending',
+
                 'date'=>$trip->date,
                 'totalAmount'=> $trip->price,
             ]);

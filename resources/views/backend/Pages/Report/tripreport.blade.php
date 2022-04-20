@@ -4,9 +4,8 @@
 
 
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                <h1 class="h2">Trip</h1>
+                <h1 class="h2">Trip Report</h1>
 
-    <a class="btn btn-success" href="{{route('trip.create')}}">Create New Trip</a>
 
             </div>
     <table class="table">
@@ -25,7 +24,6 @@
 
       <th scope="col">image</th>
       <th scope="col">Price</th>
-      <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
@@ -43,11 +41,7 @@
       <td>{{$singleBiscuit->details}}</td>
       <td><img width="150"src="{{url('/uploads',$singleBiscuit->image)}}" alt="trip image"></td>
       <td>{{$singleBiscuit->price}}</td>
-      <td>{{$singleBiscuit->action}}
-          <a class="btn btn-primary" href="{{route('trip.edit',$singleBiscuit->id)}}">Edit</a>
-          <a class="btn btn-danger" href="{{route('trip.delete',$singleBiscuit->id)}}">Delete</a>
-          
-      </td>
+     
 
     </tr>
     @endforeach

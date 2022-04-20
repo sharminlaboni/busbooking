@@ -17,6 +17,7 @@
       <th scope="col">seat number</th>
       <th scope="col">date</th>
       <th scope="col">counter</th>
+      <th scope="col">Status</th>
       <th scope="col">Total amount</th>
       
       
@@ -35,6 +36,8 @@
         <td>{{$singlebook->seat_number}}</td>
       <td>{{$singlebook->date}}</td>
       <td>{{$singlebook->counter->counter_name}}</td>
+      <td>{{$singlebook->booking_status}}</td>
+
       <td>{{$singlebook->totalAmount}}</td>
 
     </tr>

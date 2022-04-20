@@ -239,7 +239,7 @@ ol {
 
 
 
-  <form action="{{route('seat.store')}}"  method="POST">
+  <form action="{{route('pay')}}"  method="POST">
     @csrf
     <div style="display: flex; padding-left: 345px;">
   <div style="padding-top: 70px; padding-right: 40px;">
@@ -285,7 +285,7 @@ ol {
     @endforeach
   </ol>
   <div class="exit exit--back fuselage">
-    <button  type="submit" >Book now</button>
+    <button  type="submit" >Pay now</button>
   </div>
 </div>
 </div>

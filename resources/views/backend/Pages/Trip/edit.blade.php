@@ -3,10 +3,10 @@
 @section('main')
 <form action="{{route('trip.update')}}" method="POST" encType="multipart/form-data">
 @method('put') 
- 
+<input type="hidden" value="{{$trips->id}}" name="trip_id">
+
 @csrf
-<input type="hidden" value="{{$trips->id}}"name="trip_id">
-    <div class="form-group">
+<div class="form-group">
       <label for="Bus">Bus</label>
       
         <select class="form-control" name="Bus_id" id="">
@@ -17,8 +17,9 @@
 </div> 
 <div class="form-group">
       <label for="exampleInputPassword1">bus_type</label>
-      <input value="{{$trips->bus_type}}"  name="bus_type" type="text" class="form-control" id="exampleInputPassword1" placeholder="Password">
-</div>
+      <input required name="bus_type" type="text" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    </div>
+
       <div class="form-group"> 
         <label for="route">route</label> 
          <select class="form-control" name="route_id" id=""> 
@@ -29,32 +30,32 @@
         </div> 
         <div class="form-group">
         <label for="exampleInputEmail1">date</label>
-        <input value="{{$trips->date}}"name="date" type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        <input required name="date" type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
       </div>
-    <!-- <div class="form-group"> -->
-      <!-- <label for="exampleInputPassword1">route_name</label> -->
-      <!-- <input name="route_name" type="number" class="form-control" id="exampleInputPassword1" placeholder="Password"> -->
-    <!-- </div> -->
-    
+   
     <div class="form-group">
       <label for="exampleInputPassword1">time</label>
-      <input value="{{$trips->time}}"   name="time" type="time" class="form-control" id="exampleInputPassword1" placeholder="Password">
+      <select class="form-control" name="time_id" id="">
+            @foreach($times as $timeinfo)
+            <option value="{{$timeinfo->id}}">{{$timeinfo->time}}</option>
+            @endforeach
+        </select>
     </div>
     <div class="form-group">
         <label for="exampleInputEmail1">Details</label>
-        <input value="{{$trips->details}}" name="details" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        <input required name="details" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
       </div>
       <div class="form-group">
         <label for="exampleInputEmail1">image</label>
-        <input value="{{$trips->image}}"      name="image" type="file" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        <input name="image" type="file" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
       </div>
 
     <div class="form-group">
         <label for="exampleInputEmail1">Price</label>
-        <input value="{{$trips->price}}"    name="price" type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        <input required name="price" type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
       </div>
       

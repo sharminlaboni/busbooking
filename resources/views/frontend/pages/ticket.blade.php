@@ -4,6 +4,23 @@
 <div class="card"  id="invoice">
 
 
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Bus Ticket</title>
+  </head>
+  <body>
+   
+
+  
+
 <div class="headline"><h2> Ticket <span class="badges"></span></h2>
 <div class="tripListViewWrapperDiv" style="display:block;">
 @foreach ($trips as $info)
@@ -18,10 +35,7 @@
                                 
                                 <div class="fw-coach-code-info">
                                     <i class="icon-arrow-down"></i>
-                                    <div>
-                                        <div class="fw-coach-code-label"> coach</div>
-                                        <div class="fw-coach-code"></div>
-                                    </div>
+                                    
                                 </div>
                                 <div class="fw-area-code">
                                 {{$info->route->toLocation->Location_name}}
@@ -44,9 +58,7 @@
                                         {{$info->bus_type}}
  
                                         </div>
-                                        <div class="fw-tripinfo-destination">
-                                            DHAKA
-                                        </div> 
+                                        
                                     </div>
                                     <div class="fw-fareinfo col-md-2">
                                         <div class="fw-tripinfo-label">
@@ -75,11 +87,7 @@
  
                                         </div>
                                       </div>
-                                    <div class="col-md-2 show-trip-details">
-                                         <button type="button" class="btn btn-primary arrow-down pull-right" data-toggle="0"><i class="fa fa-list"></i>&nbsp;&nbsp;<a href="{{route('seat.view',$info->id)}}">view seat</a></button>
-                                    </div>
-                                </div>
-                                
+                                   
                         </div>
                       @endforeach
                         </div>
@@ -90,6 +98,20 @@
                     </div>
 </div>
                     
+  
+            
+
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+   
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+ 
+  </body>
+</html>
 <div class="col-md-4">
 
 <button class="btn btn-success" onclick="printInvoice('invoice')">
@@ -105,8 +127,7 @@ function printInvoice(divName) {
     window.print();
     document.body.innerHTML = originalContents;
 }
-</script>              
-            
+</script>        
 
 
                                        

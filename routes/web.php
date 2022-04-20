@@ -11,7 +11,8 @@ use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\LocationController;
 use App\Http\Controllers\Backend\TimeController;
 use App\Http\Controllers\Backend\DriverController;
-use App\Http\Controllers\Backend\PaymentController;
+// use App\Http\Controllers\Backend\PaymentController;
+use App\Http\controllers\SslCommerzPaymentController;
 
 //website
 use App\Http\Controllers\Frontend\HomeController;
@@ -63,33 +64,6 @@ Route::group(['prefix'=>'admin','middleware'=>'admin'],function (){
 
 
 
-//Route::get('/welcome', function () {
-    //return view('welcome');
-//})->name('welcome');
-//Route::get('/dashboard',function(){
-    //return view('backend.pages.dashboard');
-
-
-// Route::get('/Route',function(){
-//     return view('backend.pages.Route.create');
-
-// });
-
-
-//Route::get('/booking',function(){
-    //return view('backend.pages.booking');
-
-//});
-// Route::get('/counter',function(){
-//     return view('backend.pages.counter');
-
-// });
-// Route::get('/payment',function(){
-//     return view('backend.pages.payment');
-
-// });
-//Route::get('/customer',function(){
-    //return view('backend.pages.customer');
 
 //url,controller name,controller method,route name
 //Route
@@ -101,6 +75,9 @@ Route::put('/Route/update',[RouteController::class,'routeUpdate'])->name('route.
 Route::get('/Route/delete/{id}',[RouteController::class,'routeDelete'])->name('route.delete');
 //
 Route::get('/dashboard',[UserController::class,'dashboard'])->name('admin.dashboard');
+
+Route::get('/report/result',[UserController::class,'report'])->name('admin.report.result');
+Route::get('/report',[UserController::class,'tripreport'])->name('trip.report');
 
 
 
@@ -136,11 +113,16 @@ Route::get('/Location/delete/{id}',[LocationController::class,'LocationDelete'])
 Route::get('/time/show',[TimeController::class,'time'])->name('admin.time.show');
 Route::get('/time/create',[TimeController::class,'timeCreate'])->name('time.create');
 Route::post('/time/store',[TimeController::class,'timeStore'])->name('time.store');
+Route::get('/time/edit/{id}',[TimeController::class,'timeEdit'])->name('time.edit');
+Route::put('/time/update',[TimeController::class,'timeUpdate'])->name('time.update');
+Route::get('/time/delete/{id}',[TimeController::class,'timeDelete'])->name('time.delete');
 //Driver
 Route::get('/driver/show',[DriverController::class,'driver'])->name('admin.driver.show');
 Route::get('/driver/create',[DriverController::class,'driverCreate'])->name('driver.create');
 Route::post('/driver/store',[DriverController::class,'driverStore'])->name('driver.store');
-
+// Route::get('/driver/edit/{id}',[DriverController::class,'driverEdit'])->name('driver.edit');
+// Route::put('/driver/update',[DriverController::class,'driverUpdate'])->name('driver.update');
+// Route::get('/driver/delete/{id}',[DriverController::class,'deiverDelete'])->name('driver.delete');
 //counter
 Route::get('/Counter/show',[CounterController::class,'Counter'])->name('admin.Counter.show');
 Route::get('/Counter/create',[CounterController::class,'CounterCreate'])->name('Counter.create');
@@ -173,18 +155,29 @@ Route::get('customer/logout',[HomeController::class,'logout'])->name('customer.l
 Route::get('customer/profile',[HomeController::class,'myprofile'])->name('customer.profile');
 
 
+
+Route::group(['middleware'=>'auth'],function (){ 
+    
+    
 //search trip
 Route::post('/search/',[HomeController::class,'Search'])->name('trip.search');
-Route::group(['middleware'=>'auth'],function (){   
+
+Route::post('/success', [SslCommerzPaymentController::class, 'success']);
+Route::post('/fail', [SslCommerzPaymentController::class, 'fail']);
+Route::post('/cancel', [SslCommerzPaymentController::class, 'cancel']);
+
+Route::post('/pay', [SslCommerzPaymentController::class, 'index'])->name('pay');//submit
+
+    
 //viewseat
-Route::get('/view/{trip_id}',[HomeController::class,'viewseat'])->name('seat.view');
+Route::get('/view/{trip_id}',[HomeController::class,'viewseat'])->name('seat.view');//from
 //booking store
-Route::post('/view/store',[HomeController::class,'seatstore'])->name('seat.store');
+Route::post('/view/seat/store',[HomeController::class,'seatstore'])->name('seat.store');
 //viewbooking
 Route::get('/booking',[HomeController::class,'booking'])->name('book.view');
 //viewinvoice
 Route::get('/view/invoice/{id}',[BookingdetailsController::class,'viewinvoivce'])->name('view.invoice');
 //ticket
-Route::get('/view/ticket',[BookingdetailsController::class,'viewticket'])->name('view.ticket');
+Route::get('/ticket',[BookingdetailsController::class,'viewticket'])->name('show.ticket');
 });
 

@@ -67,19 +67,27 @@ class TripController extends Controller
 }
 public function tripEdit($id){
     $routes=Route::all();
-    $buses=Bus::all();
 
+    // dd($routes);
+    $buses=Bus::all();
+    $times=Time::all();
 
     $trips = Trip::find($id);
     if ($trips) {
-    return view('backend.pages.trip.edit',compact('trips','buses','routes'));
+    return view('backend.pages.trip.edit',compact('trips','buses','routes','times'));
     } else {
         return redirect()->back();
     }
     
 }
 public function tripUpdate(Request $request){
-    // dd($request->all());
+//dd($request->all());
+    
+ 
+ $routes=Route::all();
+    
+    $buses=Bus::all();
+    $times=Time::all();
     $trips = Trip::find($request->trip_id);
     if ($trips) { 
         $trips->update([
@@ -87,7 +95,7 @@ public function tripUpdate(Request $request){
         'bus_type'=>$request->bus_type,
         'route_id'=>$request->route_id,
         'date'=>$request->date,
-        'time_id'=> $request->time_id,
+        'time_id'=>$request->time_id,
         'price'=>$request->price,
         'details'=>$request->details,
         //'image'=>$filename,
