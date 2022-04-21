@@ -24,9 +24,8 @@
       <th scope="row">1</th>
       <td>{{$timeinfo->time}}</td>
       <td>
-          <a class="btn btn-primary" href="">Edit</a>
-          <a class="btn btn-danger" href="">Delete</a>
-         <a class="btn btn-success" href="">View</a> 
+          <a class="btn btn-primary" href="{{route('time.edit',$timeinfo->id)}}">Edit</a>
+          <a class="btn btn-danger" href="{{route('time.delete',$timeinfo->id)}}">Delete</a>
       </td>
 
     </tr>

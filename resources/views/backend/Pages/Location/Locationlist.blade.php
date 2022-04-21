@@ -9,7 +9,7 @@
     <table class="table">
   <thead>
     <tr>
-      <th scope="col">#</th>
+      <th scope="col">Location id</th>
       <th scope="col"> Location_name</th>
     
       <th scope="col">Action</th>
@@ -20,7 +20,7 @@
 
   @foreach($locations as $singleLocation)
     <tr>
-      <th scope="row">1</th>
+      <th scope="row">{{$singleLocation->id}}</th>
       <td>{{$singleLocation->Location_name}}</td>
       
       <td>

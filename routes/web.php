@@ -120,9 +120,9 @@ Route::get('/time/delete/{id}',[TimeController::class,'timeDelete'])->name('time
 Route::get('/driver/show',[DriverController::class,'driver'])->name('admin.driver.show');
 Route::get('/driver/create',[DriverController::class,'driverCreate'])->name('driver.create');
 Route::post('/driver/store',[DriverController::class,'driverStore'])->name('driver.store');
-// Route::get('/driver/edit/{id}',[DriverController::class,'driverEdit'])->name('driver.edit');
-// Route::put('/driver/update',[DriverController::class,'driverUpdate'])->name('driver.update');
-// Route::get('/driver/delete/{id}',[DriverController::class,'deiverDelete'])->name('driver.delete');
+Route::get('/driver/edit/{id}',[DriverController::class,'driverEdit'])->name('driver.edit');
+Route::put('/driver/update',[DriverController::class,'driverUpdate'])->name('driver.update');
+Route::get('/driver/delete/{id}',[DriverController::class,'deiverDelete'])->name('driver.delete');
 //counter
 Route::get('/Counter/show',[CounterController::class,'Counter'])->name('admin.Counter.show');
 Route::get('/Counter/create',[CounterController::class,'CounterCreate'])->name('Counter.create');
@@ -176,7 +176,7 @@ Route::post('/view/seat/store',[HomeController::class,'seatstore'])->name('seat.
 //viewbooking
 Route::get('/booking',[HomeController::class,'booking'])->name('book.view');
 //viewinvoice
-Route::get('/view/invoice/{id}',[BookingdetailsController::class,'viewinvoivce'])->name('view.invoice');
+Route::get('/view/invoice/{user_id}/{trip_id}',[BookingdetailsController::class,'viewinvoivce'])->name('view.invoice');
 //ticket
 Route::get('/ticket',[BookingdetailsController::class,'viewticket'])->name('show.ticket');
 });

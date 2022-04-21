@@ -31,7 +31,7 @@
 
 
     <td>
-          <a class="btn btn-success" href="">View</a> 
+          <a class="btn btn-danger" href="">Delete</a> 
       </td>
 
     </tr>

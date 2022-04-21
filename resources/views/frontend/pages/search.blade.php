@@ -16,11 +16,12 @@
                                 </div>
                                 
                                 <div class="fw-coach-code-info">
-                                    <i class="icon-arrow-down"></i>
-                                    <div>
+                                    To
+                                    <!-- <i class="icon-arrow-down"></i> -->
+                                    <!-- <div>
                                         <div class="fw-coach-code-label"> coach</div>
                                         <div class="fw-coach-code"></div>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="fw-area-code">
                                 {{$info->route->toLocation->Location_name}}
@@ -34,22 +35,23 @@
                                         <div class="fw-tripinfo-label">
                                         {{$info->time->time}}
 
-                                        </div>
+                                         </div>
                                         <div class="fw-tripinfo-busstation">
                                         {{$info->Date}}
  
-                                        </div>
+                                         </div> 
+                                         
                                         <div class="fw-tripinfo-label" style="padding-top: 10px;">
-                                        {{$info->bus_type}}
+                                        <!-- {{$info->bus_type}} -->
  
-                                        </div>
-                                       
+                                        </div> 
+                                        
                                     </div>
                                     <div class="fw-fareinfo col-md-2">
                                         <div class="fw-tripinfo-label">
                                             Standard
                                         </div>
-                                                                                    <div class="fw-fare-currency-label">BDT</div>
+                                            <div class="fw-fare-currency-label">BDT</div>
                                             <div class="fw-fare-currency standard-fare">
                                             {{$info->price}}
 
@@ -60,20 +62,20 @@
                                             Bus information
                                         </div>
                                         <div class="fw-tripinfo-busstation">
-                                        {{$info->Bus->Bus_name}}
+                                       Bus name: {{$info->Bus->Bus_name}}
  
                                         </div>
                                         <div class="fw-tripinfo-busstation">
-                                        {{$info->date}}
+                                        Journey Date:{{$info->date}}
  
                                         </div>
                                         <div class="fw-tripinfo-label" style="padding-top: 10px;">
-                                        {{$info->bus_type}}
+                                       Bus_type: {{$info->bus_type}}
  
                                         </div>
                                       </div>
                                     <div class="col-md-2 show-trip-details">
-                                         <button type="button" class="btn btn-primary arrow-down pull-right" data-toggle="0"><i class="fa fa-list"></i>&nbsp;&nbsp;<a href="{{route('seat.view',$info->id)}}">view seat</a></button>
+                                         <button type="button" class="btn btn-primary arrow-down pull-right" data-toggle="0">&nbsp;&nbsp;<a href="{{route('seat.view',$info->id)}}">view seat</a></button>
                                     </div>
                                 </div>
                                 

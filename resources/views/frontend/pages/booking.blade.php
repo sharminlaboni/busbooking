@@ -185,17 +185,16 @@
             {{$booking[$key]->first()->booking_status}}
         </td>
         
-
-        <td>{{$booking[$key]->first()->totalAmount}}</td>
+        <td>{{$book->sum('totalAmount')}}</td>
         <td>
         {{$booking[$key]->first()->date}}
       </td>
       <td>
-         <a class="btn btn-primary" href="{{route('view.invoice',$booking[$key]->first()->id)}}">view invoice</a>  
+         <a class="btn btn-primary" href="{{route('view.invoice',[$book->first()->user_id,$book->first()->trip_id])}}">view Ticket</a>  
       </td>
-      <td>
+      <!-- <td>
          <a class="btn btn-danger" href="{{route('show.ticket')}}">Ticket</a>  
-      </td>
+      </td> -->
       
     @endforeach
     </tr>

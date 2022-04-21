@@ -10,22 +10,16 @@
     <div class="row">
         <div class="col-md-3">
             <div class="card" >
-                <h5 class="card-header" style="background-color: green">Total Trip</h5>
-                <div class="card-body" style="background-color: green">
-
-    
-                <h2>{{$total_trip}}</h2>
-
-
-
-
-                </div>
+                <h5 class="card-header" style="background-color:LightGray ">Total Trip</h5>
+                <div class="card-body" style="background-color: LightGray">
+               <h2>{{$total_trip}}</h2>
+            </div>
             </div>
         </div>
         <div class="col-md-3">
             <div class="card">
-                <h5 class="card-header" style="background-color: green" >Total Route</h5>
-                <div class="card-body"style="background-color: green" >
+                <h5 class="card-header" style="background-color: violet" >Total Route</h5>
+                <div class="card-body"style="background-color: violet" >
 
                     <h2>{{$total_route}}</h2>
 

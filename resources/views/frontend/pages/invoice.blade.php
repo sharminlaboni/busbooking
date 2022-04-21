@@ -1,10 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title></title>
+  </head>
+  <body>
+ 
+ 
+ 
  <div class="container">
         <div class="card"  id="invoice">
             <div class="card-header">
-                Invoice
+                Ticket
                 
                 <div>
-                <strong>{{$booking->created_at}}</strong>
+                <strong>{{$booking->first()->created_at}}</strong>
                </div> 
 
             </div>
@@ -23,8 +39,8 @@
 
                     <div class="col-sm-6">
                         <h6 class="mb-3">To:</h6>
-                        <div>{{$booking->user->name}}</div>
-                        <div>Email:{{$booking->user->email}}</div>
+                        <div>{{$booking->first()->user->name}}</div>
+                        <div>Email:{{$booking->first()->user->email}}</div>
                         </div>
 
 
@@ -35,47 +51,38 @@
                     <table class="table table-striped">
                         <thead>
                         <tr>
-                            <th class="center">#</th>
-                            <th>bus seat name</th>
+                            <!-- <th class="center">#</th> -->
+                            <th> bus seat name</th>
                             <th class="right">counter</th>
                             <th class="center"></th>
-                            <th class="right">Total</th>
+                            
                         </tr>
                         </thead>
                         <tbody>
-
+                        @foreach($booking as $key=>$book)
                         <tr>
-                            <td class="left strong">{{$booking->seat_number}}</td>
-                            <td class="right">{{$booking->counter_id}} .BDT</td>
-                            <td class="right">{{$booking->totalAmount }} .BDT</td>
+                            <td class="left strong">
+                               
+                            <p> {{$book->seat_number}}</p>
+                             
+                        </td>
+                            <td class="right">{{$book->counter->counter_name}}</td>
+                           
                         </tr>
+                       @endforeach
+                       <div class="row">
+                       <div class="col-lg-4 col-sm-5">
 
+                       <tr>
+                           <td>Total:</td>
+                           <td class="right">{{$booking->sum('totalAmount')}}.BDT</td>
+                       </tr>
+                     </div>
+                    </div>
                         </tbody>
                     </table>
                 </div>
-                <div class="row">
-                    <div class="col-lg-4 col-sm-5">
-
-                    </div>
-
-                    <div class="col-lg-4 col-sm-5 ml-auto">
-                        <table class="table table-clear">
-                            <tbody>
-                            <tr>
-                                <td class="left">
-                                    <strong>total</strong>
-                                </td>
-                                <td class="right">{{$booking->total}} .BDT</td>
-                            </tr>
-
-                           
-                            </tbody>
-                        </table>
-
-                    </div>
-
-                </div>
-
+               
             </div>
         </div>
     </div>
@@ -96,3 +103,13 @@
             document.body.innerHTML = originalContents;
         }
     </script>
+
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+   
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+</body>
+</html>

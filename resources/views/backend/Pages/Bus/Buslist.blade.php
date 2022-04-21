@@ -22,7 +22,7 @@
 
   @foreach($buses as $singlebus)
     <tr>
-      <th scope="row">1</th>
+      <th scope="row">{{$singlebus->id}}</th>
       <td>{{$singlebus->Bus_name}}</td>
       <td>{{$singlebus->Bus_number}}</td>
       <td>{{$singlebus->Bus_type}}</td>

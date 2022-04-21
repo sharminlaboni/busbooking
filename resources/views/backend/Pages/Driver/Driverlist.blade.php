@@ -35,8 +35,8 @@
       <td>{{$singledriver->Bus_name}}</td>      
       <td>{{$singledriver->Bus_type}}</td> 
       <td>
-          <a class="btn btn-primary" href="">Edit</a>
-          <a class="btn btn-danger" href="">Delete</a>
+          <a class="btn btn-primary" href="{{route('driver.edit',$singledriver->id)}}">Edit</a>
+          <a class="btn btn-danger" href="{{route('driver.delete',$singledriver->id)}}">Delete</a>
       </td>
 
     </tr>

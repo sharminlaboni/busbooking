@@ -28,4 +28,40 @@ class TimeController extends Controller
        return redirect()->route('admin.time.show');
 
    }
+   public function timeEdit($id){
+
+    $times = Time::find($id);
+
+    if ($times) {
+    return view('backend.pages.time.edit',compact('times'));
+    } else {
+        return redirect()->back();
+    }
+    
+}
+public function timeUpdate(Request $request){
+    //  dd($request->all());
+    $times = Time::find($request->time_id);
+    if ($times) {
+        $times->update([
+            'time'=>$request->time,
+
+        ]);
+        return redirect()->route('admin.time.show');
+    } else {
+        return redirect()->back();
+    }
+}
+public function timeDelete($id){
+    $times = Time::find($id);
+    if($times){
+        $times->delete();
+        return redirect()->back();
+    }else{
+        return redirect()->back();
+
+    
+    }
+}
+
 }

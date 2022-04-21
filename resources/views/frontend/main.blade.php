@@ -140,7 +140,7 @@
   @include('frontend.partials.footer')
 
 
-</div><!--/wrapper-->
+</div>
 
 
 <div id="matchedWarnings" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog"
@@ -151,89 +151,7 @@
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <h2 style="text-align: center;font-size: 20px;font-weight: 300">HOW TO BUY TICKET</h2>
             </div>
-            <!-- <div class="modal-body">
-                <div class="row row-design">
-                    <div class="col-md-12 alignment">
-                        <div class="design">
-                            <div class="headline"><h2>STEP 1</h2></div>
-
-                            <p style="font-size: 16px">1. Select <strong>From</strong> location, <strong>To</strong>
-                                location, <strong>Journey Date</strong>, <strong>Time Period</strong> and <strong>Coach
-                                    Type</strong>.</p>
-                            <p style="font-size: 16px">2. Press <strong>Search</strong> button.</p>
-                            <p>&nbsp;</p>
-                            <img src="../../images/buy-step-1-search.v2.png" alt=""
-                                 style="height: auto;width: 75%;margin-left: 50px"/>
-                            <p>&nbsp;</p>
-                            <p style="font-size: 16px">3. You will get <strong>Available Trips</strong>. Select <strong>View
-                                Seats</strong>
-                                button to expand the details of a trip.</p>
-                            <p>&nbsp;</p>
-                            <img src="../../images/buy-step-1-trips.v2.png" alt=""
-                                 style="height: auto;width: 75%;margin-left: 50px"/>
-                        </div>
-                        <div class="design">
-
-                            <div class="headline"><h2>STEP 2</h2></div>
-                            <p style="font-size: 16px">1. Select seats.</p>
-                            <p style="font-size: 16px">2. Select your preferred boarding point.</p>
-                            <p style="font-size: 16px">3. Press <strong>Continue</strong> button.</p>
-                            <p>&nbsp;</p>
-                            <img src="../../images/buy-step-2-seats.v2.png" alt=""
-                                 style="height: auto;width: 75%;margin-left: 50px"/>
-                        </div>
-                        <div class="design">
-
-
-                            <div class="headline"><h2>STEP 3</h2></div>
-                            <p style="font-size: 16px">1. You will be taken to Login screen. If you already have created your user
-                                account before please login using your
-                                credentials. If not click on signup link and follow the process.</p>
-                            <p>&nbsp;</p>
-                            <img src="../../images/buy-step-3-signin.png" alt=""
-                                 style="height: auto;width: 75%;margin-left: 50px"/>
-                            <p>&nbsp;</p>
-                            <p style="font-size: 16px">2. After successful login you will get a glance of the ticket details
-                                based on your selections.</p>
-                            <p>&nbsp;</p>
-                            <img src="../../images/buy-step-3-booking.v2.png" alt=""
-                                 style="height: auto;width: 75%;margin-left: 50px"/>
-                            <p>&nbsp;</p>
-                            <p style="font-size: 16px">3. Select the checkbox agreeing the terms &amp; conditions.</p>
-                            <p style="font-size: 16px">4. Press <strong>Proceed to Pay</strong> button.</p>
-                            <p>&nbsp;</p>
-
-                        </div>
-                        <div class="design">
-
-                            <div class="headline"><h2>STEP 4</h2></div>
-                            <p style="font-size: 16px">1. You will be taken to SSL Commerz payment gateway.</p>
-                            <p style="font-size: 16px">2. Select your preferred payment method and follow the gateway
-                                instructions.</p>
-                            <p>&nbsp;</p>
-                            <img src="../../images/buy-step-4-payment.v2.jpg" alt=""
-                                 style="height: 500px;margin-left: 50px"/>
-                            <p>&nbsp;</p>
-                            <p style="font-size: 16px">3. Upon successful payment you will be redirected to confirmation
-                                page and your reservation is done.</p>
-
-                            <p>&nbsp;</p>
-                            <img src="../../images/buy-step-4-confirm.v2.png" alt=""
-                                 style="height: auto;width: 75%;margin-left: 50px"/>
-                            <p>&nbsp;</p>
-
-                            <p style="font-size: 16px">4. After successful reservation you will get a SMS and email
-                                stating the details of your ticket.</p>
-                            <p>&nbsp;</p>
-                            <p style="font-size: 16px">5. Done.</p>
-
-
-                        </div>
-                    </div>
-                </div>
-
-
-            </div> -->
+            
         </div>
     </div>
 </div>
@@ -247,46 +165,12 @@
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <h2 style="text-align: center;font-size: 20px;font-weight: 300">HOW TO CANCEL TICKET</h2>
             </div>
-            <!-- <div class="modal-body">
-                <div class="row row-design">
-                    <div class="col-md-12 alignment">
-                        <div class="design">
-                            <div class="headline"><h2>STEP 1</h2></div>
-
-                            <p style="font-size: 16px">1. Select <strong>Ticket Operation</strong> tab.</p>
-
-                            <p style="font-size: 16px">2. Enter ticket<strong> PNR </strong> and click on
-                                <strong>Search</strong> then you will get ticket information / details.</p>
-                            <p>&nbsp;</p>
-                            <img src="../../images/cancel-step-1-search.v2.png" alt=""
-                                 style="height: auto;width: 75%;margin-left: 50px"/>
-
-                        </div>
-                        <div class="design">
-
-                            <div class="headline"><h2>STEP 2</h2></div>
-                            <p style="font-size: 16px">1. From ticket information / details you will see <strong>Cancel
-                                Ticket</strong> button if the ticket is eligible for cancellation.</p>
-                            <p style="font-size: 16px">2. Read terms and conditions and click on chekbox to agree.</p>
-                            <p>&nbsp;</p>
-                            <img src="../../images/cancel-step-2-confirm.v2.png" alt=""
-                                 style="height: auto;width: 75%;margin-left: 50px"/>
-                            <p style="font-size: 16px">3. Press <strong>Cancel Ticket and Refund</strong> button to proceed.</p><br>
-                            <p style="font-size: 16px;text-align: center">Refunds will be processed automatically at the
-                                time of cancellation. Depending on the customer’s Bank/Card/M-Cash, it may take 3-14
-                                business days to reflect the credit in your account.</p>
-
-                        </div>
-                    </div>
-                </div>
-
-
-            </div> -->
+           
         </div>
     </div>
 </div>
 
-<!-- hv,,, -->
+
 
 <script type="text/javascript" src="{{url('frontend/js/jquery.min.js')}}"></script>
 <script type="application/javascript">

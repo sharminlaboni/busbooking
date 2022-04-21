@@ -80,7 +80,7 @@ class SslCommerzPaymentController extends Controller
                 'booking_status'=>'pending',
                 'counter_id'=>$request->counter,
                 'date'=>$trip->date,
-                'totalAmount'=> $trip->price * count($request->seats),
+                'totalAmount'=> $trip->price ,
             ]);
         }
         $sslc = new SslCommerzNotification();

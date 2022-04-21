@@ -9,8 +9,9 @@ use Illuminate\Http\Request;
 
 class BookingdetailsController extends Controller
 {
-    public function viewinvoivce($id){
-        $booking = Booking::find($id);
+    public function viewinvoivce($user_id,$trip_id){
+        $booking = Booking::where('user_id',$user_id)
+        ->where('trip_id',$trip_id)->get();
         return view('frontend.pages.invoice',compact('booking'));
 
     }

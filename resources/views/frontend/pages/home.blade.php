@@ -10,14 +10,11 @@
     <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
             <button class="tablinks btn-block" onclick="openTab(event, 'one')" id="defaultOpen">
-                <i class="fa fa-ticket"></i> Buy Ticket
+                <!-- <i class="fa fa-ticket"></i>  -->
+                Buy Ticket
             </button>
         </div>
-        <!-- <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  no-padding">
-            <button class="tablinks btn-block" onclick="openTab(event, 'two')" id="manageTicket">
-                <i class="fa fa-cog"> </i> Ticket Operation
-            </button>
-        </div> -->
+        
     </div>
 </div>
 <div id="one" class="tabcontent">
@@ -60,7 +57,7 @@
 
             <section class="col-md-6 col-sm-6 col-xs-12 col-lg-2">
                 <label class="input">
-                    <i class="icon-append fa fa-calendar"></i>
+                     <!-- <i class="icon-append fa fa-calendar"></i> -->
                     <input type="date" name="travelDate" id="date" data-date-start-date="+0d" placeholder="Trip Date" value="">
                 </label>
             </section>
@@ -77,7 +74,7 @@
                         </option>
                         @endforeach
                     </select>
-                    <i></i>
+                    <!-- <i></i> -->
                 </label>
             </section>
 
@@ -90,7 +87,7 @@
                         <option value="false">Non AC
                         </option>
                     </select>
-                    <i></i>
+                    <!-- <i></i> -->
                 </label>
             </section>
             <div class="col-md-6 col-sm-6 col-xs-5 col-lg-1">
@@ -102,16 +99,6 @@
 
     </form>
 </div>
-
-<div id="two" class="tabcontent">
-
-    <div class="row">
-        <div class="col-md-12">
-            <div id="cancelDetails"></div>
-        </div>
-    </div>
-</div>
-
 
 <div id="matchedWarning" class="modal fade" role="dialog">
 
@@ -134,49 +121,13 @@
     </div>
 </div>
 
-
-<div id="dateWarning" class="modal fade" role="dialog">
-
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content ">
-            <div class="modal-header modal-header-bg">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4><b style="color: red">Warning!</b></h4>
-            </div>
-            <div class="modal-body">
-                <p style="font-size: 16px">Dear valued customer, to buy online ticket from 28-September-2021 onward
-                    please
-                    <a target="_blank" href="https://ticket.shohagh.com">CLICK HERE</a>
-                </p>
-            </div>
-
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal"><span>Cancel</span>
-                    &nbsp;
-                </button>
-                <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="gotToNewWebsite()"><span>Continue</span>
-                   <a herf="{{route('trip.search')}}">Button</a>
-                &nbsp;
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-
-
-</div>
-
-
 <!--=== Content Part ===-->
 <div class="container content-sm" style="margin-top: -20px">
 
    
     <h2 class="h2-heading" style="margin-top: 50px;margin-bottom: 50px">WHY Online Bus Tiket Reservation</h2>
     <div class="row banner-wrap">
-        <div class="col-md-3 col-sm-6 banner-section">
+        <div class="col-md-4 col-sm-6 banner-section">
             <div class="box1-img-container">
                 <img class="box1-img" src="frontend/img/seat.png" alt="">
             </div>
@@ -185,7 +136,7 @@
                 without any discomfort in our seats
             </div>
         </div>
-          <div class="col-md-3 col-sm-6 banner-section">
+          <!-- <div class="col-md-3 col-sm-6 banner-section">
             <div class="box1-img-container">
                 <img class="box1-img" src="frontend/img/gps.png" alt="">
             </div>
@@ -193,16 +144,16 @@
             <div class="box1-content">All of our buses are equipped with GPS and Camera for safety of the valued
                 passenger.
             </div>  
-        </div>
-        <div class="col-md-3 col-sm-6 banner-section">
-            <div class="box1-img-container">
+        </div> -->
+        <div class="col-md-4 col-sm-6 banner-section">
+             <div class="box1-img-container">
                 <img class="box1-img" src="frontend/img/ticket.png" alt="">
-            </div>
+            </div> 
             <div class="box1-title">BUY TICKETS EASILY</div>
             <div class="box1-content">You can buy ticket from our wide range of ticketing booth and online. 
             </div>
         </div>
-        <div class="col-md-3 col-sm-6 banner-section">
+        <div class="col-md-4 col-sm-6 banner-section">
             <div class="box1-img-container">
                 <img class="box1-img" src="frontend/img/entertainment.png" alt="">
             </div>
@@ -338,6 +289,6 @@
 
 </div>
 
-<!-- End Content Part -->
+
 
 @endsection
