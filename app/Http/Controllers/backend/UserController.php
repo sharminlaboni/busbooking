@@ -74,5 +74,18 @@ public function tripreport(Request $request){
     return view('backend.pages.Report.tripreport',compact('trips'));
 
 }
+ public function userdelete($id){
+     $users = User::find($id);
+     if($users){
+         $users->delete();
+         return redirect()->back();
+   }else{
+        return redirect()->back();
+
+    
+}
+
+ }
 
 }
+

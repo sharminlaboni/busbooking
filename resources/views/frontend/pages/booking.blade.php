@@ -180,8 +180,7 @@
       
       <td>
             {{$booking[$key]->first()->counter->counter_name}}
-        </td>
-        <td>
+        </td>       <td>
             {{$booking[$key]->first()->booking_status}}
         </td>
         

@@ -140,6 +140,7 @@ Route::get('/Bus/delete/{id}',[BusController::class,'busDelete'])->name('bus.del
 //payment
 
 Route::get('/payment', [PaymentController::class,'payment'])->name('admin.payment');
+Route::get('/user/delete/{id}',[UserController::class,'userdelete'])->name('user.delete');
 
 });
 

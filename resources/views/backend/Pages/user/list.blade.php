@@ -30,9 +30,9 @@
        <td scope="row">{{$data->role}}</td>
 
 
-    <td>
-          <a class="btn btn-danger" href="">Delete</a> 
-      </td>
+     <td>
+          <a class="btn btn-danger" href="{{route('user.delete',$data->id)}}">Delete</a> 
+      </td> 
 
     </tr>
     @endforeach
