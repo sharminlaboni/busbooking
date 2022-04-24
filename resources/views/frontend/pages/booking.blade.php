@@ -157,7 +157,7 @@
       <th scope="col">Name</th>
       <th scope="col">seat name </th>     
        <th scope="col">Counter</th>
-       <th scope="col">Status</th>
+       <th scope="col"> Booking Status</th>
        
         <th scope="col">Total amount</th> 
      <th scope="col">Date</th>      

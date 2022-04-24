@@ -43,6 +43,8 @@
                         <h6 class="mb-3">To:</h6>
                         <div>{{$booking->first()->user->name}}</div>
                         <div>Phone:+880{{$booking->first()->user->contact}}</div>
+                        <div>Trip_Id:{{$booking->first()->trip_id}}</div>
+
 
                         <div>Email:{{$booking->first()->user->email}}</div>
                     </div>

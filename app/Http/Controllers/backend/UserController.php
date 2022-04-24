@@ -8,7 +8,15 @@ use App\Models\User;
 use App\Models\Trip;
 use App\Models\Booking;
 use App\Models\Route;
+use App\Models\Bus;
+use App\Models\Counter;
+use App\Models\Driver;
+
+
+
+
 use Carbon\Carbon;
+
 
 
 
@@ -56,9 +64,16 @@ class UserController extends Controller
         $total_booking=Booking::all()->count();
         $total_route=Route::all()->count();
 
+        $total_bus=Bus::all()->count();
+        $total_counter=Counter::all()->count();
+        $total_driver=Driver::all()->count();
 
 
-        return view('backend.pages.dashboard',compact('total_trip','total_customer','total_booking','total_route'));
+
+
+
+
+        return view('backend.pages.dashboard',compact('total_trip','total_customer','total_booking','total_route','total_bus','total_counter','total_driver'));
     }
 
     public function report()
@@ -74,6 +89,20 @@ public function tripreport(Request $request){
     return view('backend.pages.Report.tripreport',compact('trips'));
 
 }
+public function bookreport()
+    {
+    
+    return view('backend.pages.Reportbooking.bookreport');
+}
+public function getreport(Request $request){
+    // dd($request->all());
+
+    $toDate = Carbon::parse($request->to_date)->addDay();
+    $booking = Booking::WhereBetween('created_at',[$request->from_date,$toDate])->get();
+    return view('backend.pages.Reportbooking.bookingreport',compact('booking'));
+
+}
+
  public function userdelete($id){
      $users = User::find($id);
      if($users){

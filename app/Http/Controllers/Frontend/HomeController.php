@@ -81,6 +81,11 @@ class HomeController extends Controller
         //dd($booking);
         return view('frontend.pages.myprofile',compact('user','booking'));
     }
+    public  function contact()
+    {
+       
+        return view('frontend.pages.contact');
+    }
 
         
     

@@ -80,11 +80,14 @@
                 <li class="active">
                     <a href="/">Home</a>
                 
+                <!-- <li class="">
+                    <a href="{{route('company.contact')}}">Contact Us</a>
+                </li> -->
                 <li class="">
-                    <a href="/contactUs">Contact Us</a>
+                    <a href="{{route('company.contact')}}">Contact Us</a>
                 </li>
                 <li class="">
-                    <a href="{{route('customer.profile')}}">My profile</a>
+                    <a href="{{route('customer.profile')}}">Your profile</a>
                 </li>
                 @if(auth()->user())
                  <li class="">

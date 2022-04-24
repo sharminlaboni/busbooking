@@ -35,6 +35,7 @@
 
 
                 </div>
+                
             </div>
         </div>
         <div class="col-md-3">
@@ -49,6 +50,49 @@
             </div>
         </div>
     </div>
+    <div></div>
+</br>
+
+ <div class="row">
+ <div class="col-md-3">
+            <div class="card"  style="background-color: purple">
+                <h5 class="card-header"style="background-color: purple" >Total Bus</h5>
+                <div class="card-body">
+
+                <h2>{{$total_bus}}</h2>
+
+
+                </div>
+            </div>
+        </div>
+
+
+<div class="col-md-3">
+            <div class="card"  style="background-color: blue">
+                <h5 class="card-header"style="background-color: blue" >Total Counter</h5>
+                <div class="card-body">
+
+                <h2>{{$total_counter}}</h2>
+
+
+                </div>
+            </div>
+        </div>
+
+
+<div class="col-md-3">
+            <div class="card"  style="background-color: green">
+                <h5 class="card-header"style="background-color: green" >Total Driver</h5>
+                <div class="card-body">
+
+                <h2>{{$total_driver}}</h2>
+
+
+                </div>
+            </div>
+        </div>
+
+</div>
 
 
 @endsection

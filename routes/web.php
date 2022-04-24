@@ -79,6 +79,8 @@ Route::get('/dashboard',[UserController::class,'dashboard'])->name('admin.dashbo
 Route::get('/report/result',[UserController::class,'report'])->name('admin.report.result');
 Route::get('/report',[UserController::class,'tripreport'])->name('trip.report');
 
+Route::get('/bookreport/result',[UserController::class,'bookreport'])->name('admin.report.booking');
+Route::get('/getreport',[UserController::class,'getreport'])->name('booking.report');
 
 
 
@@ -154,6 +156,7 @@ Route::get('/customer/login',[HomeController::class,'login'])->name('customer.lo
 Route::post('/customer/do-login',[HomeController::class,'doLogin'])->name('customer.do.login');
 Route::get('customer/logout',[HomeController::class,'logout'])->name('customer.logout');
 Route::get('customer/profile',[HomeController::class,'myprofile'])->name('customer.profile');
+Route::get('contact',[HomeController::class,'contact'])->name('company.contact');
 
 
 
